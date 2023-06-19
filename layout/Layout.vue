@@ -15,15 +15,15 @@ import BackToTop from "~~/components/back-to-top/BackToTop.vue";
 
 export default defineComponent({
   components: { Header, Footer, BackToTop },
-  props:{
-    transparent:{
-      type:Boolean,
-      default:false,
+  props: {
+    transparent: {
+      type: Boolean,
+      default: false,
     },
-    white_bg:{
-       type:Boolean,
-       default:false,
+    white_bg: {
+      type: Boolean,
+      default: false,
     },
-  }
+  },
 });
 </script>

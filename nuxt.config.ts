@@ -12,14 +12,12 @@ export default defineNuxtConfig({
   ],
   modules: [
     [
-      '@pinia/nuxt',
+      "@pinia/nuxt",
       {
-        autoImports: [
-          'defineStore',
-          ['defineStore', 'definePiniaStore'],
-        ],
+        autoImports: ["defineStore", ["defineStore", "definePiniaStore"]],
       },
     ],
+    "@nuxtjs/i18n",
   ],
   app: {
     head: {
@@ -32,4 +30,4 @@ export default defineNuxtConfig({
       ],
     },
   },
-})
+});

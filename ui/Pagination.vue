@@ -1,30 +1,39 @@
 <template>
   <div
-    :class="`shop-pagination-wrapper ${style_2?'':'d-md-flex justify-content-between align-items-center'}`"
+    :class="`shop-pagination-wrapper ${
+      style_2 ? '' : 'd-md-flex justify-content-between align-items-center'
+    }`"
   >
     <div class="basic-pagination">
       <ul>
-        <li class="page-item"
-            :class="{'disabled': (currPage === 1)}"
-            @click.prevent="setPage(currPage-1)">
-            <a href="#">
-              <i class="fal fa-angle-left"></i>
-            </a>
+        <li
+          class="page-item"
+          :class="{ disabled: currPage === 1 }"
+          @click.prevent="setPage(currPage - 1)"
+        >
+          <a href="#">
+            <i class="fal fa-angle-left"></i>
+          </a>
         </li>
 
-        <li class="page-item"
-            v-for="n in totalPage"
-            @click.prevent="setPage(n)" :key="n">
-            <a :class="[`page-link`, {'active': (currPage === (n))}]" href="">
-                {{n}}
-            </a>
+        <li
+          class="page-item"
+          v-for="n in totalPage"
+          @click.prevent="setPage(n)"
+          :key="n"
+        >
+          <a :class="[`page-link`, { active: currPage === n }]" href="">
+            {{ n }}
+          </a>
         </li>
-        <li class="page-item"
-            :class="{'disabled': (currPage === totalPage)}"
-            @click.prevent="setPage(currPage + 1)">
-            <a href="#">
-              <i class="fal fa-angle-right"></i>
-            </a>
+        <li
+          class="page-item"
+          :class="{ disabled: currPage === totalPage }"
+          @click.prevent="setPage(currPage + 1)"
+        >
+          <a href="#">
+            <i class="fal fa-angle-right"></i>
+          </a>
         </li>
       </ul>
     </div>
@@ -47,10 +56,10 @@ export default defineComponent({
     paginationClass: {
       type: String,
     },
-    style_2:{
-      type:Boolean,
-      default:false,
-    }
+    style_2: {
+      type: Boolean,
+      default: false,
+    },
   },
   data() {
     return {
@@ -96,4 +105,3 @@ export default defineComponent({
   },
 });
 </script>
-

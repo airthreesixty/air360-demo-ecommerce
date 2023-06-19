@@ -1,10 +1,16 @@
 <template>
   <div
-    :class="`banner__area ${style_2?'pt-95':''} ${style_3?'pt-20':''} ${style_4?'pt-30':''}`"
+    :class="`banner__area ${style_2 ? 'pt-95' : ''} ${style_3 ? 'pt-20' : ''} ${
+      style_4 ? 'pt-30' : ''
+    }`"
   >
     <div :class="`container ${style_3 ? 'custom-container' : ''}`">
       <div
-        :class="`${style_2?'':!style_3 && !style_4 && 'banner__inner p-relative mt--95'} ${style_4 ? 'banner__inner-2 p-relative' : ''}`"
+        :class="`${
+          style_2
+            ? ''
+            : !style_3 && !style_4 && 'banner__inner p-relative mt--95'
+        } ${style_4 ? 'banner__inner-2 p-relative' : ''}`"
       >
         <div class="row">
           <div
@@ -20,11 +26,13 @@
               </div>
               <div class="banner__content p-absolute transition-3">
                 <h5>
-                  <nuxt-link href="/shop" >
+                  <nuxt-link href="/shop">
                     <span v-html="item.parentTitle"></span>
                   </nuxt-link>
                 </h5>
-                <nuxt-link href="/shop" class="link-btn">Discover now</nuxt-link>
+                <nuxt-link href="/shop" class="link-btn"
+                  >Discover now</nuxt-link
+                >
               </div>
             </div>
           </div>

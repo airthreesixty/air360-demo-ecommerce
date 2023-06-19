@@ -1,16 +1,16 @@
 <template>
   <layout-three>
     <main class="box-25">
-      <home-two-hero-slider/>
-      <category-area :style_2="true"/>
-      <trending-product-three/>
-      <shop-banner :style_2="true"/>
-      <sale-off-product/>
-      <home-three-testimonial/>
-      <offer-products-slider/>
-      <client-brand-slider :style_2="true"/>
-      <subscribe-area :style_2="true"/>
-      <blog-area :style_2="true"/>
+      <home-two-hero-slider />
+      <category-area :style_2="true" />
+      <trending-product-three />
+      <shop-banner :style_2="true" />
+      <sale-off-product />
+      <home-three-testimonial />
+      <offer-products-slider />
+      <client-brand-slider :style_2="true" />
+      <subscribe-area :style_2="true" />
+      <blog-area :style_2="true" />
     </main>
   </layout-three>
 </template>
@@ -28,7 +28,6 @@ import OfferProductsSlider from "~~/components/products/OfferProductsSlider.vue"
 import ClientBrandSlider from "~~/components/client-brands/ClientBrandSlider.vue";
 import SubscribeArea from "~~/components/subscribe/SubscribeArea.vue";
 import BlogArea from "~~/components/blogs/BlogArea.vue";
-
 
 export default defineComponent({
   components: {
@@ -51,5 +50,3 @@ export default defineComponent({
   },
 });
 </script>
-
-

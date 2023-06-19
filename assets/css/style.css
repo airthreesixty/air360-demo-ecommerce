@@ -815,7 +815,7 @@ p {
 /* scroll to top */
 #scroll a {
   position: fixed;
-  right: 30px;
+  right: 40px;
   bottom: 30px;
   width: 40px;
   height: 40px;

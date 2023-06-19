@@ -3,11 +3,11 @@
     <home-seven-hero-slider />
     <category-area-two />
     <best-saller-products />
-    <video-box/>
-    <featured-products/>
-    <home-seven-testimonial/>
-    <blog-area-two/>
-    <client-brand-slider-two/>
+    <video-box />
+    <featured-products />
+    <home-seven-testimonial />
+    <blog-area-two />
+    <client-brand-slider-two />
   </layout-seven>
 </template>
 

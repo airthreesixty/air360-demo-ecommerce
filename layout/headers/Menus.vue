@@ -30,7 +30,7 @@
           :key="index"
           class="has-dropdown"
         >
-          <nuxt-link :href="`${m_mnu.link}`">{{m_mnu.title}}</nuxt-link>
+          <nuxt-link :href="`${m_mnu.link}`">{{ m_mnu.title }}</nuxt-link>
           <ul>
             <li v-for="(m, index) in m_mnu.dropdownMenu" :key="index">
               <nuxt-link :href="`${m.link}`">{{ m.title }}</nuxt-link>
@@ -44,21 +44,18 @@
 
 <script lang="ts">
 // import menuType from "~~/types/menuType";
-import bg from '~/assets/img/bg/mega-menu-bg.jpg';
-
+import bg from "~/assets/img/bg/mega-menu-bg.jpg";
 
 import { defineComponent } from "vue";
 import menuData from "~/mixins/menuData";
 
 export default defineComponent({
   mixins: [menuData],
-  data(){
+  data() {
     return {
-      bg
-    }
+      bg,
+    };
   },
-  setup () {
-    
-  }
+  setup() {},
 });
 </script>
