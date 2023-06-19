@@ -9,7 +9,7 @@
     <blog-area/>
     <subscribe-area/>
   </layout> -->
-    <layout-seven>
+  <layout-seven>
     <home-seven-hero-slider />
     <category-area-two />
     <best-saller-products />

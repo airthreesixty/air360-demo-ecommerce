@@ -11,7 +11,7 @@
         },
         "contact": "コンタクト",
         "search": {
-            "title": "サーチ",
+            "title": "検索",
             "all": "全カテゴリ",
             "accessories": "アクセサリー",
             "chair": "イス",
@@ -32,7 +32,7 @@
         "checkout": "チェックアウト",
         "create-account": "アカウントを作成する",
         "language": {
-            "title": "Language",
+            "title": "言語",
             "japanese": "日本語",
             "english": "English"
         },
