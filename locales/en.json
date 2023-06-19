@@ -57,5 +57,13 @@
         "title": "The world is make all.",
         "desc": "Embrace your role in shaping the world around you, for it is within your power to make a difference."
     },
-    "shop-now": "SHOP NOW"
+    "shop-now": "SHOP NOW",
+    "fashion-men": {
+        "title": "FASHION FOR MEN’S",
+        "desc": "Redefining Style with Confidence"
+    },
+    "fashion-women": {
+        "title": "FASHION FOR WOMEN’S",
+        "desc": "Embracing Elegance and Empowerment"
+    }
 }
