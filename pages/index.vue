@@ -51,15 +51,15 @@
 //     });
 //   },
 // });
-import LayoutSeven from "~~/layout/LayoutSeven.vue";
-import HomeSevenHeroSlider from "~~/components/hero-banner/HomeSevenHeroSlider.vue";
-import CategoryAreaTwo from "~~/components/category/CategoryAreaTwo.vue";
-import BestSallerProducts from "~~/components/products/BestSallerProducts.vue";
-import VideoBox from "~~/components/video-box/VideoBox.vue";
-import FeaturedProducts from "~~/components/products/FeaturedProducts.vue";
-import HomeSevenTestimonial from "~~/components/testimonial/HomeSevenTestimonial.vue";
-import BlogAreaTwo from "~~/components/blogs/BlogAreaTwo.vue";
-import ClientBrandSliderTwo from "~~/components/client-brands/ClientBrandSliderTwo.vue";
+import LayoutSeven from '~~/layout/LayoutSeven.vue'
+import HomeSevenHeroSlider from '~~/components/hero-banner/HomeSevenHeroSlider.vue'
+import CategoryAreaTwo from '~~/components/category/CategoryAreaTwo.vue'
+import BestSallerProducts from '~~/components/products/BestSallerProducts.vue'
+import VideoBox from '~~/components/video-box/VideoBox.vue'
+import FeaturedProducts from '~~/components/products/FeaturedProducts.vue'
+import HomeSevenTestimonial from '~~/components/testimonial/HomeSevenTestimonial.vue'
+import BlogAreaTwo from '~~/components/blogs/BlogAreaTwo.vue'
+import ClientBrandSliderTwo from '~~/components/client-brands/ClientBrandSliderTwo.vue'
 
 export default defineComponent({
   components: {
@@ -73,10 +73,10 @@ export default defineComponent({
     BlogAreaTwo,
     ClientBrandSliderTwo,
   },
-  setup() {
+  setup () {
     useHead({
-      title: "Home Seven",
-    });
+      title: 'Home Seven',
+    })
   },
-});
+})
 </script>

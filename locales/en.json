@@ -41,5 +41,21 @@
             "euro": "EUR - EURO",
             "yen": "JPY - YEN"
         }
-    }
+    },
+    "slider1": {
+        "sm-title": "UP TO 50% OFF",
+        "title": "Life style that you need, Yo.",
+        "desc": "Discover the lifestyle you truly need, Yo. Embrace a vibrant and authentic way of living that aligns with your passions, values, and personal well-being."
+    },
+    "slider2": {
+        "sm-title": "QUICK PARCEL DELIVERY",
+        "title": "Creative theme Awesome",
+        "desc": "Ignite your creativity with an awesome theme."
+    },
+    "slider3": {
+        "sm-title": "QUICK PARCEL DELIVERY",
+        "title": "The world is make all.",
+        "desc": "Embrace your role in shaping the world around you, for it is within your power to make a difference."
+    },
+    "shop-now": "SHOP NOW"
 }

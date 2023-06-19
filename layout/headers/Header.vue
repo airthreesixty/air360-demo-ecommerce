@@ -5,7 +5,7 @@
         id="header-sticky"
         :class="`header__area ${transparent ? 'header__transparent' : ''} ${
           header_big ? 'box-25' : !white_bg ? 'grey-bg' : ''
-        } 
+        }
         ${isSticky ? 'sticky' : ''}`"
       >
         <div :class="`${header_big ? 'container-fluid' : 'container'}`">
@@ -18,8 +18,8 @@
               }`"
             >
               <div class="logo">
-                <nuxt-link href="/">
-                  <img src="~/assets/img/logo/logo.png" alt="logo" />
+                <nuxt-link :to="localePath('/')">
+                  <img src="~/assets/img/logo/logo.png" alt="logo">
                 </nuxt-link>
               </div>
             </div>
@@ -47,27 +47,30 @@
                   </nav>
                 </div>
                 <div
-                  @click.prevent="handleOffcanvas"
                   class="mobile-menu-btn d-lg-none"
+                  @click.prevent="handleOffcanvas"
                 >
-                  <a href="#" class="mobile-menu-toggle"
-                    ><i class="fas fa-bars"></i
-                  ></a>
+                  <a
+                    href="#"
+                    class="mobile-menu-toggle"
+                  ><i class="fas fa-bars" /></a>
                 </div>
                 <div v-if="!header_big" class="header__action">
                   <ul>
                     <li>
                       <a
-                        @click.prevent="handleOpenSearchBar"
                         href="#"
                         class="search-toggle"
+                        @click.prevent="handleOpenSearchBar"
                       >
-                        <i class="ion-ios-search-strong"></i> {{ $t('nav.search.title') }}
+                        <i class="ion-ios-search-strong" /> {{ $t('nav.search.title') }}
                       </a>
                     </li>
                     <li>
-                      <a href="#" class="cart"
-                        ><i class="ion-bag"></i> {{ $t('nav.cart.title') }}
+                      <a
+                        href="#"
+                        class="cart"
+                      ><i class="ion-bag" /> {{ $t('nav.cart.title') }}
                         <span>({{ state.totalPriceQuantity.quantity }})</span>
                       </a>
                       <!-- cart mini start -->
@@ -75,7 +78,7 @@
                       <!-- cart mini end -->
                     </li>
                     <li>
-                      <a href="#"><i class="far fa-bars"></i></a>
+                      <a href="#"><i class="far fa-bars" /></a>
                       <extra-info />
                     </li>
                   </ul>
@@ -91,16 +94,18 @@
                 <ul>
                   <li>
                     <a
-                      @click.prevent="handleOpenSearchBar"
                       href="#"
                       class="search-toggle"
+                      @click.prevent="handleOpenSearchBar"
                     >
-                      <i class="ion-ios-search-strong"></i> {{ $t('nav.search.title') }}
+                      <i class="ion-ios-search-strong" /> {{ $t('nav.search.title') }}
                     </a>
                   </li>
                   <li>
-                    <a href="#" class="cart"
-                      ><i class="ion-bag"></i> Cart
+                    <a
+                      href="#"
+                      class="cart"
+                    ><i class="ion-bag" /> Cart
                       <span>({{ state.totalPriceQuantity.quantity }})</span>
                     </a>
                     <!-- cart mini start -->
@@ -108,7 +113,7 @@
                     <!-- cart mini end -->
                   </li>
                   <li>
-                    <a href="#"><i class="far fa-bars"></i></a>
+                    <a href="#"><i class="far fa-bars" /></a>
                     <extra-info />
                   </li>
                 </ul>
@@ -131,14 +136,14 @@
 
 <script lang="ts">
 // external
-import { defineComponent } from "vue";
-import { useCartStore } from "~~/store/useCart";
+import { defineComponent } from 'vue'
 // internal
-import Menus from "./Menus.vue";
-import CartMini from "./header-com/CartMini.vue";
-import SearchPopup from "~~/components/common/modals/SearchPopup.vue";
-import ExtraInfo from "./header-com/ExtraInfo.vue";
-import OffCanvas from "~~/components/common/sidebar/OffCanvas.vue";
+import Menus from './Menus.vue'
+import CartMini from './header-com/CartMini.vue'
+import ExtraInfo from './header-com/ExtraInfo.vue'
+import SearchPopup from '~~/components/common/modals/SearchPopup.vue'
+import { useCartStore } from '~~/store/useCart'
+import OffCanvas from '~~/components/common/sidebar/OffCanvas.vue'
 
 // interface
 interface SearchPopupComponentRef {
@@ -164,35 +169,36 @@ export default defineComponent({
       default: false,
     },
   },
-  data() {
+  setup () {
+    const state = useCartStore()
+    const localePath = useLocalePath()
+    return { state, localePath }
+  },
+  data () {
     return {
       isSticky: false,
       showSearch: false,
-    };
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.handleSticky)
   },
   methods: {
-    handleSticky() {
+    handleSticky () {
       if (window.scrollY > 80) {
-        this.isSticky = true;
+        this.isSticky = true
       } else {
-        this.isSticky = false;
+        this.isSticky = false
       }
     },
-    handleOpenSearchBar() {
-      const searchPopupRef = this.$refs.search_popup as SearchPopupComponentRef;
-      searchPopupRef.openSearchPopup();
+    handleOpenSearchBar () {
+      const searchPopupRef = this.$refs.search_popup as SearchPopupComponentRef
+      searchPopupRef.openSearchPopup()
     },
-    handleOffcanvas() {
-      const offCanvas = this.$refs.offcanvas as OffCanvasComponentRef;
-      offCanvas.OpenOffcanvas();
+    handleOffcanvas () {
+      const offCanvas = this.$refs.offcanvas as OffCanvasComponentRef
+      offCanvas.OpenOffcanvas()
     },
   },
-  setup() {
-    const state = useCartStore();
-    return { state };
-  },
-  mounted() {
-    window.addEventListener("scroll", this.handleSticky);
-  },
-});
+})
 </script>

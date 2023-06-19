@@ -12,21 +12,21 @@ export default defineNuxtConfig({
   ],
   modules: [
     [
-      "@pinia/nuxt",
+      '@pinia/nuxt',
       {
-        autoImports: ["defineStore", ["defineStore", "definePiniaStore"]],
+        autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
       },
     ],
-    "@nuxtjs/i18n",
+    '@nuxtjs/i18n',
   ],
   i18n: {
     vueI18n: './i18n.config.ts',
-        strategy: 'prefix',
+    strategy: 'prefix',
     locales: [
       { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
       { code: 'ja', iso: 'ja-JP', file: 'ja.json', name: '日本語' },
     ],
-    defaultLocale: 'ja',
+    defaultLocale: 'en',
     langDir: 'locales',
     detectBrowserLanguage: false,
     // detectBrowserLanguage: {
@@ -47,4 +47,4 @@ export default defineNuxtConfig({
       ],
     },
   },
-});
+})

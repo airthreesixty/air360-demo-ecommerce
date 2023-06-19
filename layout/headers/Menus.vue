@@ -9,14 +9,18 @@
           : item.megamenu && 'mega-menu has-dropdown'
       }`"
     >
-      <nuxt-link :href="`${item.link}`">{{ item.title }}</nuxt-link>
+      <nuxt-link :to="localePath(item.link)">
+        {{ item.title }}
+      </nuxt-link>
 
       <ul
         v-if="item?.hasDropdown && !item.megamenu"
         class="submenu transition-3"
       >
         <li v-for="(menu, index) in item.dropdownItems" :key="index">
-          <nuxt-link :href="`${menu.link}`">{{ menu.title }}</nuxt-link>
+          <nuxt-link :to="localePath(menu.link)">
+            {{ menu.title }}
+          </nuxt-link>
         </li>
       </ul>
 
@@ -30,10 +34,14 @@
           :key="index"
           class="has-dropdown"
         >
-          <nuxt-link :href="`${m_mnu.link}`">{{ m_mnu.title }}</nuxt-link>
+          <nuxt-link :href="`${m_mnu.link}`">
+            {{ m_mnu.title }}
+          </nuxt-link>
           <ul>
             <li v-for="(m, index) in m_mnu.dropdownMenu" :key="index">
-              <nuxt-link :href="`${m.link}`">{{ m.title }}</nuxt-link>
+              <nuxt-link :to="localePath(m.link)">
+                {{ m.title }}
+              </nuxt-link>
             </li>
           </ul>
         </li>
@@ -44,18 +52,23 @@
 
 <script lang="ts">
 // import menuType from "~~/types/menuType";
-import bg from "~/assets/img/bg/mega-menu-bg.jpg";
+import { defineComponent } from 'vue'
+import bg from '~/assets/img/bg/mega-menu-bg.jpg'
 
-import { defineComponent } from "vue";
-import menuData from "~/mixins/menuData";
+import menuData from '~/mixins/menuData'
 
 export default defineComponent({
   mixins: [menuData],
-  data() {
+  setup () {
+    const localePath = useLocalePath()
+    return {
+      localePath,
+    }
+  },
+  data () {
     return {
       bg,
-    };
+    }
   },
-  setup() {},
-});
+})
 </script>

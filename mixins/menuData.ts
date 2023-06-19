@@ -1,7 +1,7 @@
-import menuType from "~/types/menuType";
+import menuType from '~/types/menuType'
 
 export default {
-  data() {
+  data () {
     return {
       menuData: [
         // {
@@ -22,8 +22,8 @@ export default {
         {
           link: '/shop',
           title: this.$t('nav.shop.title'),
-          hasDropdown: true,
-          megamenu: true,
+          hasDropdown: false,
+          megamenu: false,
           dropdownItems: [
             {
               link: '/shop',
@@ -36,7 +36,7 @@ export default {
                 // { link: '/shop', title: 'Shop Page' },
                 // { link: '/shop', title: 'Shop Page' },
                 // { link: '/shop', title: 'Shop Infinity' },
-              ]
+              ],
             },
             {
               link: '/shop',
@@ -49,7 +49,7 @@ export default {
                 { link: '/product-details', title: 'Simple Product' },
                 { link: '/product-details', title: 'Variable Product' },
                 { link: '/product-details', title: 'External Product' },
-              ]
+              ],
             },
             {
               link: '/shop',
@@ -61,14 +61,14 @@ export default {
                 { link: '/checkout', title: 'Checkout' },
                 { link: '/register', title: 'Register' },
                 { link: '/login', title: 'Login' },
-              ]
+              ],
             },
-          ]
+          ],
         },
         {
           link: '/blog',
           title: this.$t('nav.blog.title'),
-          hasDropdown: true,
+          hasDropdown: false,
           megamenu: false,
           dropdownItems: [
             { link: '/blog', title: 'Blog' },
@@ -78,7 +78,7 @@ export default {
             { link: '/blog-2-col-mas', title: 'Blog 2 Column Masonary' },
             { link: '/blog-3-col', title: 'Blog 3 Column' },
             { link: '/blog-details', title: 'Blog Details' },
-          ]
+          ],
         },
         // {
         //   link: '/shop',
@@ -99,7 +99,7 @@ export default {
           link: '/contact',
           title: this.$t('nav.contact'),
         },
-      ] as menuType[]
+      ] as menuType[],
     }
-  }
+  },
 }
