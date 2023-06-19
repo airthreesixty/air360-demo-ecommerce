@@ -19,6 +19,23 @@ export default defineNuxtConfig({
     ],
     "@nuxtjs/i18n",
   ],
+  i18n: {
+    vueI18n: './i18n.config.ts',
+        strategy: 'prefix',
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json', name: 'English' },
+      { code: 'ja', iso: 'ja-JP', file: 'ja.json', name: '日本語' },
+    ],
+    defaultLocale: 'ja',
+    langDir: 'locales',
+    detectBrowserLanguage: false,
+    // detectBrowserLanguage: {
+    //   useCookie: true,
+    //   redirectOn: 'root',
+    //   alwaysRedirect: true,
+    // },
+    baseUrl: process.env.BASE_URL,
+  },
   app: {
     head: {
       title: 'Outstock - Clean, Minimal eCommerce Vue Nuxt 3 Template',

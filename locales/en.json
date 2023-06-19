@@ -1,0 +1,45 @@
+{
+    "nav": {
+        "home": {
+            "title": "Home"
+        },
+        "shop": {
+            "title": "Shop"
+        },
+        "blog": {
+            "title": "Blog"
+        },
+        "contact": "Contact",
+        "search": {
+            "title": "Search",
+            "all": "All Categories",
+            "accessories": "Accessories",
+            "chair": "Chair",
+            "tablet": "Tablet",
+            "men": "Men",
+            "women": "Women",
+            "input-text": "Search for products..."
+        },
+        "cart": {
+            "title": "Cart",
+            "empty": "Your cart is empty"
+        }
+    },
+    "menu": {
+        "my-account": "My Account",
+        "wish-list": "Wishlist",
+        "cart": "Cart",
+        "checkout": "Checkout",
+        "create-account": "Create Account",
+        "language": {
+            "title": "Language",
+            "japanese": "日本語",
+            "english": "English"
+        },
+        "currency": {
+            "title": "Currency",
+            "euro": "EUR - EURO",
+            "yen": "JPY - YEN"
+        }
+    }
+}

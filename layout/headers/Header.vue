@@ -62,12 +62,12 @@
                         href="#"
                         class="search-toggle"
                       >
-                        <i class="ion-ios-search-strong"></i> Search
+                        <i class="ion-ios-search-strong"></i> {{ $t('nav.search.title') }}
                       </a>
                     </li>
                     <li>
                       <a href="#" class="cart"
-                        ><i class="ion-bag"></i> Cart
+                        ><i class="ion-bag"></i> {{ $t('nav.cart.title') }}
                         <span>({{ state.totalPriceQuantity.quantity }})</span>
                       </a>
                       <!-- cart mini start -->
@@ -95,7 +95,7 @@
                       href="#"
                       class="search-toggle"
                     >
-                      <i class="ion-ios-search-strong"></i> Search
+                      <i class="ion-ios-search-strong"></i> {{ $t('nav.search.title') }}
                     </a>
                   </li>
                   <li>

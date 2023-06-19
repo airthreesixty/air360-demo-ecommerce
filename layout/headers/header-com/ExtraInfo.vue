@@ -3,40 +3,36 @@
       <li>
           <div class="my-account">
               <div class="extra-title">
-                  <h5>My Account</h5>
+                  <h5>{{ $t('menu.my-account') }}</h5>
               </div>
               <ul>
-                  <li><nuxt-link href="/account">My Account</nuxt-link></li>
-                  <li><nuxt-link href="/wishlist">Wishlist</nuxt-link></li>
-                  <li><nuxt-link href="/cart">Cart</nuxt-link></li>
-                  <li><nuxt-link href="/checkout">Checkout</nuxt-link></li>
-                  <li><nuxt-link href="/register">Create Account</nuxt-link></li>
+                  <li><nuxt-link href="/account">{{ $t('menu.my-account') }}</nuxt-link></li>
+                  <li><nuxt-link href="/wishlist">{{ $t('menu.wish-list') }}</nuxt-link></li>
+                  <li><nuxt-link href="/cart">{{ $t('menu.cart') }}</nuxt-link></li>
+                  <li><nuxt-link href="/checkout">{{ $t('menu.checkout') }}</nuxt-link></li>
+                  <li><nuxt-link href="/register">{{ $t('menu.create-account') }}</nuxt-link></li>
               </ul>
           </div>
       </li>
       <li>
           <div class="lang">
               <div class="extra-title">
-                  <h5>Language</h5>
+                  <h5>{{ $t('menu.language.title') }}</h5>
               </div>
               <ul>
-                  <li><a href="#">English</a></li>
-                  <li><a href="#">France</a></li>
-                  <li><a href="#">Germany</a></li>
-                  <li><a href="#">Bangla</a></li>
+                  <li><a href="#">{{ $t('menu.language.english') }}</a></li>
+                  <li><a href="#">{{ $t('menu.language.japanese') }}</a></li>
               </ul>
           </div>
       </li>
       <li>
           <div class="currency">
               <div class="extra-title">
-                  <h5>currency</h5>
+                  <h5>{{ $t('menu.currency.title') }}</h5>
               </div>
               <ul>
-                  <li><a href="#">USD - US Dollar</a></li>
-                  <li><a href="#">EUR - Ruro</a></li>
-                  <li><a href="#">GBP - Britis Pound</a></li>
-                  <li><a href="#">INR - Indian Rupee</a></li>
+                  <li><a href="#">{{ $t('menu.currency.euro') }}</a></li>
+                  <li><a href="#">{{ $t('menu.currency.yen') }}</a></li>
               </ul>
           </div>
       </li>

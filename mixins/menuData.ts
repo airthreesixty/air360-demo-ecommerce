@@ -4,24 +4,24 @@ export default {
   data() {
     return {
       menuData: [
-        {
-          link: '/',
-          title: 'Home',
-          hasDropdown: true,
-          megamenu: false,
-          dropdownItems: [
-            { link: '/', title: 'Home Style 1' },
-            { link: '/home-2', title: 'Home Style 2' },
-            { link: '/home-3', title: 'Home Style 3' },
-            { link: '/home-4', title: 'Home Style 4' },
-            { link: '/home-5', title: 'Home Style 5' },
-            { link: '/home-6', title: 'Home Style 6' },
-            { link: '/home-7', title: 'Home Style 7' },
-          ]
-        },
+        // {
+        //   link: '/',
+        //   title: this.$t('nav.home.title'),
+        //   hasDropdown: true,
+        //   megamenu: false,
+        //   dropdownItems: [
+        //     { link: '/', title: 'Home Style 1' },
+        //     { link: '/home-2', title: 'Home Style 2' },
+        //     { link: '/home-3', title: 'Home Style 3' },
+        //     { link: '/home-4', title: 'Home Style 4' },
+        //     { link: '/home-5', title: 'Home Style 5' },
+        //     { link: '/home-6', title: 'Home Style 6' },
+        //     { link: '/home-7', title: 'Home Style 7' },
+        //   ]
+        // },
         {
           link: '/shop',
-          title: 'Shop',
+          title: this.$t('nav.shop.title'),
           hasDropdown: true,
           megamenu: true,
           dropdownItems: [
@@ -30,12 +30,12 @@ export default {
               title: 'Shop Pages',
               dropdownMenu: [
                 { link: '/shop', title: 'Standard Shop Page' },
-                { link: '/shop-right', title: 'Shop Right Sidebar' },
-                { link: '/shop-4-col', title: 'Shop 4 Column' },
-                { link: '/shop-3-col', title: 'Shop 3 Column' },
-                { link: '/shop', title: 'Shop Page' },
-                { link: '/shop', title: 'Shop Page' },
-                { link: '/shop', title: 'Shop Infinity' },
+                // { link: '/shop-right', title: 'Shop Right Sidebar' },
+                // { link: '/shop-4-col', title: 'Shop 4 Column' },
+                // { link: '/shop-3-col', title: 'Shop 3 Column' },
+                // { link: '/shop', title: 'Shop Page' },
+                // { link: '/shop', title: 'Shop Page' },
+                // { link: '/shop', title: 'Shop Infinity' },
               ]
             },
             {
@@ -67,7 +67,7 @@ export default {
         },
         {
           link: '/blog',
-          title: 'Blog',
+          title: this.$t('nav.blog.title'),
           hasDropdown: true,
           megamenu: false,
           dropdownItems: [
@@ -80,24 +80,24 @@ export default {
             { link: '/blog-details', title: 'Blog Details' },
           ]
         },
-        {
-          link: '/shop',
-          title: 'Pages',
-          hasDropdown: true,
-          megamenu: false,
-          dropdownItems: [
-            { link: '/wishlist', title: 'Wishlist' },
-            { link: '/cart', title: 'Shopping Cart' },
-            { link: '/checkout', title: 'Checkout' },
-            { link: '/account', title: 'Account' },
-            { link: '/register', title: 'Register' },
-            { link: '/login', title: 'Login' },
-            { link: '/404', title: 'Error 404' },
-          ]
-        },
+        // {
+        //   link: '/shop',
+        //   title: 'Pages',
+        //   hasDropdown: true,
+        //   megamenu: false,
+        //   dropdownItems: [
+        //     { link: '/wishlist', title: 'Wishlist' },
+        //     { link: '/cart', title: 'Shopping Cart' },
+        //     { link: '/checkout', title: 'Checkout' },
+        //     { link: '/account', title: 'Account' },
+        //     { link: '/register', title: 'Register' },
+        //     { link: '/login', title: 'Login' },
+        //     { link: '/404', title: 'Error 404' },
+        //   ]
+        // },
         {
           link: '/contact',
-          title: 'Contact',
+          title: this.$t('nav.contact'),
         },
       ] as menuType[]
     }

@@ -1,0 +1,45 @@
+{
+    "nav": {
+        "home": {
+            "title": "ホーム"
+        },
+        "shop": {
+            "title": "ショップ"
+        },
+        "blog": {
+            "title": "ブログ"
+        },
+        "contact": "コンタクト",
+        "search": {
+            "title": "サーチ",
+            "all": "全カテゴリ",
+            "accessories": "アクセサリー",
+            "chair": "イス",
+            "tablet": "タブレット",
+            "men": "メンズ",
+            "women": "レディース",
+            "input-text": "商品を探す..."
+        },
+        "cart": {
+            "title": "カート",
+            "empty": "カートは空です"
+        }
+    },
+    "menu": {
+        "my-account": "マイアカウント",
+        "wish-list": "ウィッシュリスト",
+        "cart": "カート",
+        "checkout": "チェックアウト",
+        "create-account": "アカウントを作成する",
+        "language": {
+            "title": "Language",
+            "japanese": "日本語",
+            "english": "English"
+        },
+        "currency": {
+            "title": "通貨",
+            "euro": "EUR - ユーロ",
+            "yen": "JPY - 円"
+        }
+    }
+}

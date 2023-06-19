@@ -11,20 +11,20 @@
                             </a>
                         </div>
                         <div class="header__search-header">
-                            <h3>Search</h3>
+                            <h3>{{ $t('nav.search.title') }}</h3>
                         </div>
                         <div class="header__search-categories">
                             <ul class="search-category">
-                                <li><nuxt-link href="/shop">All Categories</nuxt-link></li>
-                                <li><nuxt-link href="/shop">Accessories</nuxt-link></li>
-                                <li><nuxt-link href="/shop">Chair</nuxt-link></li>
-                                <li><nuxt-link href="/shop">Tablet</nuxt-link></li>
-                                <li><nuxt-link href="/shop">Men</nuxt-link></li>
-                                <li><nuxt-link href="/shop">Women</nuxt-link></li>
+                                <li><nuxt-link href="/shop">{{ $t('nav.search.all') }}</nuxt-link></li>
+                                <li><nuxt-link href="/shop">{{ $t('nav.search.accessories') }}</nuxt-link></li>
+                                <li><nuxt-link href="/shop">{{ $t('nav.search.chair') }}</nuxt-link></li>
+                                <li><nuxt-link href="/shop">{{ $t('nav.search.tablet') }}</nuxt-link></li>
+                                <li><nuxt-link href="/shop">{{ $t('nav.search.men') }}</nuxt-link></li>
+                                <li><nuxt-link href="/shop">{{ $t('nav.search.women') }}</nuxt-link></li>
                             </ul>
                         </div>
                         <div class="header__search-input p-relative">
-                            <input type="text" placeholder="Search for products... ">
+                            <input type="text" :placeholder="$t('nav.search.input-text')">
                             <button type="submit"><i class="far fa-search"></i></button>
                         </div>
                     </form>
