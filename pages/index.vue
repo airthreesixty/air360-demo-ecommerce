@@ -13,7 +13,7 @@
     <home-seven-hero-slider />
     <category-area-two />
     <best-saller-products />
-    <video-box />
+    <!-- <video-box /> -->
     <featured-products />
     <home-seven-testimonial />
     <blog-area-two />

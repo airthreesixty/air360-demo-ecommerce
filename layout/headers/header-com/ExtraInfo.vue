@@ -48,7 +48,7 @@
         </ul>
       </div>
     </li>
-    <li>
+    <!-- <li>
       <div class="currency">
         <div class="extra-title">
           <h5>{{ $t('menu.currency.title') }}</h5>
@@ -58,7 +58,7 @@
           <li><a href="#">{{ $t('menu.currency.yen') }}</a></li>
         </ul>
       </div>
-    </li>
+    </li> -->
   </ul>
 </template>
 

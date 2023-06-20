@@ -4,8 +4,10 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="section__wrapper text-center">
-            <h3 class="section__title-2"><span>FEATURED PRODUCTS</span></h3>
-            <p>Claritas est etiam processus dynamicus, qui sequitur.</p>
+            <h3 class="section__title-2">
+              <span>{{ $t('featured-products.title') }}</span>
+            </h3>
+            <p>{{ $t('featured-products.description') }}</p>
           </div>
         </div>
       </div>
@@ -13,7 +15,7 @@
         <div class="col-lg-12">
           <div class="product__slider-active p-relative">
             <Carousel
-               ref="slider_1"
+              ref="slider_1"
               :items-to-show="3"
               :wrap-around="true"
               :breakpoints="{
@@ -42,11 +44,11 @@
               </Slide>
             </Carousel>
             <div class="owl-nav">
-              <div @click="handlePrev" class="owl-prev">
-                <button><i class="fal fa-angle-left"></i></button>
+              <div class="owl-prev" @click="handlePrev">
+                <button><i class="fal fa-angle-left" /></button>
               </div>
-              <div @click="handleNext" class="owl-next">
-                <button><i class="fal fa-angle-right"></i></button>
+              <div class="owl-next" @click="handleNext">
+                <button><i class="fal fa-angle-right" /></button>
               </div>
             </div>
           </div>
@@ -58,11 +60,11 @@
 
 <script lang="ts">
 // external
-import { Carousel, Slide } from "vue3-carousel";
-import { defineComponent } from "vue";
+import { Carousel, Slide } from 'vue3-carousel'
+import { defineComponent } from 'vue'
 // internal
-import ProductItemTwo from "./ProductItemTwo.vue";
-import { useProductsStore } from "~~/store/useProducts";
+import ProductItemTwo from './ProductItemTwo.vue'
+import { useProductsStore } from '~~/store/useProducts'
 // interface
 interface sliderRef {
   next(): void;
@@ -71,24 +73,24 @@ interface sliderRef {
 
 export default defineComponent({
   components: { ProductItemTwo, Carousel, Slide },
-  methods:{
-    handleNext() {
-      const sliderRef = this.$refs.slider_1 as sliderRef;
-      sliderRef.next();
-    },
-    handlePrev() {
-      const sliderRef = this.$refs.slider_1 as sliderRef;
-      sliderRef.prev();
-    },
-  },
-  setup() {
-    const store = useProductsStore();
-    const products = store.products.filter((p) => p.bestSeller).filter(p => !p.big_img);
+  setup () {
+    const store = useProductsStore()
+    const products = store.products.filter(p => p.bestSeller).filter(p => !p.big_img)
     return {
       products,
-    };
+    }
   },
-});
+  methods: {
+    handleNext () {
+      const sliderRef = this.$refs.slider_1 as sliderRef
+      sliderRef.next()
+    },
+    handlePrev () {
+      const sliderRef = this.$refs.slider_1 as sliderRef
+      sliderRef.prev()
+    },
+  },
+})
 </script>
 
 <style scoped>

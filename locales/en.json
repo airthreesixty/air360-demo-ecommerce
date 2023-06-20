@@ -65,5 +65,24 @@
     "fashion-women": {
         "title": "FASHION FOR WOMEN’S",
         "desc": "Embracing Elegance and Empowerment"
+    },
+    "bestseller": {
+        "title": "BESTSELLER PRODUCTS",
+        "description": "Top-selling products. Premium quality and customer-favorite items."
+    },
+    "featured-products": {
+        "title": "FEATURED PRODUCTS",
+        "description": "Highlighted products that stand out. Exceptional items selected for their unique features and popularity."
+    },
+    "testimonials": {
+        "title": "TESTIMONIALS",
+        "description": "Customer testimonials. Hear what our satisfied customers have to say about their experiences with our products and services.",
+        "testimonial1": "I'm absolutely in love with the quality and style of the clothing I purchased. The compliments I receive whenever I wear them are endless!",
+        "testimonial2": "The home decor items I bought from your site have transformed my living space. The attention to detail and craftsmanship are remarkable. Highly recommended!",
+        "testimonial3": "I had a fantastic experience shopping on your website. The customer service was exceptional, and the furniture I ordered arrived promptly and exceeded my expectations. Will definitely be a repeat customer!"
+    },
+    "blog-lp": {
+        "title": "FROM OUR BLOG",
+        "description": "Update The Latest Fashion Trends in The World"
     }
 }
