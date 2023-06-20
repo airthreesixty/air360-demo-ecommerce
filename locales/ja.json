@@ -99,5 +99,21 @@
             "title": "コンタクト",
             "subtitle": "コンタクト"
         }
+    },
+    "categories": {
+        "title": "製品カテゴリー",
+        "lighting-chair": "照明 & イス",
+        "lighting": "照明",
+        "chair": "イス",
+        "decoration-accessories": "デコレーション & アクセサリー",
+        "decoration": "デコレーション",
+        "accessories": "アクセサリー",
+        "clothing-oil": "衣類 & オイル",
+        "clothing": "衣類",
+        "oil": "オイル",
+        "fashion-men": "メンズ",
+        "shirt": "シャツ",
+        "fashion-women": "レディース",
+        "shoes": "シューズ"
     }
 }

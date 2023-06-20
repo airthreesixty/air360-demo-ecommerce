@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar__widget mb-55">
     <div class="sidebar__widget-title mb-25">
-      <h3>Product Categories</h3>
+      <h3>{{ $t('categories.title') }}</h3>
     </div>
     <div class="sidebar__widget-content">
       <div class="categories">

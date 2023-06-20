@@ -99,5 +99,21 @@
             "title": "Contact",
             "subtitle": "Contact"
         }
+    },
+    "categories": {
+        "title": "Product Categories",
+        "lighting-chair": "Lighting & Chair",
+        "lighting": "Lighting",
+        "chair": "Chair",
+        "decoration-accessories": "Decoration & Accessories",
+        "decoration": "Decoration",
+        "accessories": "Accessories",
+        "clothing-oil": "Clothing & Oil",
+        "clothing": "Clothing",
+        "oil": "Oil",
+        "fashion-men": "For Men's Fashion",
+        "shirt": "Shirt",
+        "fashion-women": "For Women's Fashion",
+        "shoes": "Shoes"
     }
 }
