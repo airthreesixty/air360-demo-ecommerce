@@ -84,5 +84,20 @@
     "blog-lp": {
         "title": "FROM OUR BLOG",
         "description": "Update The Latest Fashion Trends in The World"
+    },
+    "bread-crumb": {
+        "home": "Home",
+        "news": {
+            "title": "News & Blog",
+            "subtitle": "Blog Standard"
+        },
+        "shop": {
+            "title": "Shop",
+            "subtitle": "Shop"
+        },
+        "contact": {
+            "title": "Contact",
+            "subtitle": "Contact"
+        }
     }
 }

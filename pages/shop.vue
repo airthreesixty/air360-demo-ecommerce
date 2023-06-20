@@ -1,6 +1,6 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Shop" subtitle="Shop" />
+    <breadcrumb-area :title="$t('bread-crumb.shop.title')" :subtitle="$t('bread-crumb.shop.subtitle')" />
     <shop-area />
   </layout>
 </template>

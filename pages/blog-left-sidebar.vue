@@ -1,15 +1,15 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="News & Blog" subtitle="Blog Standard"/>
-    <blog-area :left_side="true"/>
+    <breadcrumb-area title="News & Blog" subtitle="Blog Standard" />
+    <blog-area :left_side="true" />
   </layout>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import Layout from "~~/layout/Layout.vue";
-import BreadcrumbArea from "~~/components/common/breadcrumb/BreadcrumbArea.vue";
-import BlogArea from "~~/components/blogs/BlogStandardArea.vue";
+import { defineComponent } from 'vue'
+import Layout from '~~/layout/Layout.vue'
+import BreadcrumbArea from '~~/components/common/breadcrumb/BreadcrumbArea.vue'
+import BlogArea from '~~/components/blogs/BlogStandardArea.vue'
 
 export default defineComponent({
   components: {
@@ -17,10 +17,10 @@ export default defineComponent({
     BreadcrumbArea,
     BlogArea,
   },
-  setup() {
+  setup () {
     useHead({
-      title: "Blog",
-    });
+      title: 'Blog',
+    })
   },
-});
+})
 </script>

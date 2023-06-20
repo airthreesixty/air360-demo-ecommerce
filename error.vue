@@ -7,9 +7,9 @@
         <div class="col-xl-8 offset-xl-2 col-lg-8 offset-lg-2">
           <div class="error__content text-center">
             <div class="error__number">
-              <h1>{{error.statusCode}}</h1>
+              <h1>{{ error.statusCode }}</h1>
             </div>
-            <span>not found {{error.message}}</span>
+            <span>not found {{ error.message }}</span>
             <h2>Nothing To See Here!</h2>
             <p>
               The page are looking for has been moved or doesn’t exist anymore,
@@ -19,7 +19,7 @@
             </p>
 
             <div class="error__search">
-              <button @click="handleClearError" class="os-btn os-btn-3 os-btn-black">
+              <button class="os-btn os-btn-3 os-btn-black" @click="handleClearError">
                 Back To Home
               </button>
             </div>
@@ -32,9 +32,9 @@
 </template>
 
 <script lang="ts" setup>
-import Layout from "./layout/Layout.vue";
-import BreadcrumbArea from "./components/common/breadcrumb/BreadcrumbArea.vue";
+import Layout from './layout/Layout.vue'
+import BreadcrumbArea from './components/common/breadcrumb/BreadcrumbArea.vue'
 
-defineProps(["error"]);
-const handleClearError = () => clearError({redirect:'/'})
+defineProps(['error'])
+const handleClearError = () => clearError({ redirect: '/' })
 </script>

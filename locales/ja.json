@@ -84,5 +84,20 @@
     "blog-lp": {
         "title": "ブログより",
         "description": "世界の最新ファッショントレンドのアップデート"
+    },
+    "bread-crumb": {
+        "home": "ホーム",
+        "news": {
+            "title": "ニュース & ブログ",
+            "subtitle": "ブログスタンダード",
+        },
+        "shop": {
+            "title": "ショップ",
+            "subtitle": "ショップ"
+        },
+        "contact": {
+            "title": "コンタクト",
+            "subtitle": "コンタクト"
+        }
     }
 }
