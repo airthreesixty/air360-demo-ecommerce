@@ -7,27 +7,27 @@
         </div>
         <ul>
           <li>
-            <nuxt-link href="/account">
+            <nuxt-link :to="localePath('/account')">
               {{ $t('menu.my-account') }}
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link href="/wishlist">
+            <nuxt-link :to="localePath('/wishlist')">
               {{ $t('menu.wish-list') }}
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link href="/cart">
+            <nuxt-link :to="localePath('/cart')">
               {{ $t('menu.cart') }}
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link href="/checkout">
+            <nuxt-link :to="localePath('/checkout')">
               {{ $t('menu.checkout') }}
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link href="/register">
+            <nuxt-link :to="localePath('/register')">
               {{ $t('menu.create-account') }}
             </nuxt-link>
           </li>
@@ -69,11 +69,12 @@ export default defineComponent({
   setup () {
     const { locale, locales } = useI18n()
     const switchLocalePath = useSwitchLocalePath()
+    const localePath = useLocalePath()
 
     const availableLocales = computed(() => {
       return (locales.value).filter(i => i.code !== locale.value)
     })
-    return { locale, availableLocales, switchLocalePath }
+    return { locale, availableLocales, switchLocalePath, localePath }
   },
 })
 </script>
