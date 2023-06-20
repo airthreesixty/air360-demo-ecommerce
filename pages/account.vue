@@ -1,17 +1,17 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Account" subtitle="Account"/>
-    <profile-area/>
-    <profile-menu-area/>
+    <breadcrumb-area :title="$t('bread-crumb.account.title')" :subtitle="$t('bread-crumb.account.subtitle')" />
+    <profile-area />
+    <profile-menu-area />
   </layout>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import Layout from "~~/layout/Layout.vue";
-import BreadcrumbArea from "~~/components/common/breadcrumb/BreadcrumbArea.vue";
-import ProfileArea from "~~/components/profile/ProfileArea.vue";
-import ProfileMenuArea from "~~/components/profile/ProfileMenuArea.vue";
+import { defineComponent } from 'vue'
+import Layout from '~~/layout/Layout.vue'
+import BreadcrumbArea from '~~/components/common/breadcrumb/BreadcrumbArea.vue'
+import ProfileArea from '~~/components/profile/ProfileArea.vue'
+import ProfileMenuArea from '~~/components/profile/ProfileMenuArea.vue'
 
 export default defineComponent({
   components: {
@@ -20,10 +20,10 @@ export default defineComponent({
     ProfileArea,
     ProfileMenuArea,
   },
-  setup() {
+  setup () {
     useHead({
-      title: "Account",
-    });
+      title: 'Account',
+    })
   },
-});
+})
 </script>

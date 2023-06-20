@@ -7,31 +7,29 @@
             <div class="footer__widget mb-30">
               <div class="footer__widget-title mb-25">
                 <nuxt-link href="/">
-                  <img src="~/assets/img/logo/logo-2.png" alt="logo" />
+                  <img src="~/assets/img/logo/logo-2.png" alt="logo">
                 </nuxt-link>
               </div>
               <div class="footer__widget-content">
-                <p>
+                <!-- <p>
                   Outstock is a premium Templates theme with advanced admin
                   module. It’s extremely customizable, easy to use and fully
                   responsive and retina ready.
-                </p>
+                </p> -->
                 <div class="footer__contact">
                   <ul>
                     <li>
                       <div class="icon">
-                        <i class="fal fa-map-marker-alt"></i>
+                        <i class="fal fa-map-marker-alt" />
                       </div>
                       <div class="text">
-                        <span
-                          >Add: 1234 Heaven Stress, Beverly Hill, Melbourne,
-                          USA.</span
-                        >
+                        <span>Add: 1234 Heaven Stress, Beverly Hill, Melbourne,
+                          USA.</span>
                       </div>
                     </li>
                     <li>
                       <div class="icon">
-                        <i class="fal fa-envelope-open-text"></i>
+                        <i class="fal fa-envelope-open-text" />
                       </div>
                       <div class="text">
                         <span>Email: Contact@basictheme.com</span>
@@ -39,7 +37,7 @@
                     </li>
                     <li>
                       <div class="icon">
-                        <i class="fal fa-phone-alt"></i>
+                        <i class="fal fa-phone-alt" />
                       </div>
                       <div class="text">
                         <span>Phone Number: (800) 123 456 789</span>
@@ -50,7 +48,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3 col-lg-3 col-md-3 col-12">
+          <!-- <div class="col-xl-3 col-lg-3 col-md-3 col-12">
             <div class="footer__widget mb-30">
               <div class="footer__widget-title">
                 <h5>information</h5>
@@ -85,7 +83,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -96,8 +94,12 @@
             <div class="footer__copyright">
               <p>
                 Copyright {{ new Date().getFullYear() }} ©
-                <nuxt-link href="/">Outstock</nuxt-link> all rights reserved.
-                Powered by <nuxt-link href="/">Theme_pure</nuxt-link>
+                <nuxt-link href="/">
+                  Outstock
+                </nuxt-link> all rights reserved.
+                Powered by <nuxt-link href="/">
+                  Theme_pure
+                </nuxt-link>
               </p>
             </div>
           </div>
@@ -106,7 +108,7 @@
               <ul>
                 <social />
                 <li>
-                  <a href="#"><i class="fas fa-share-alt"></i></a>
+                  <a href="#"><i class="fas fa-share-alt" /></a>
                 </li>
               </ul>
             </div>
@@ -118,8 +120,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import Social from "~~/components/social/Social.vue";
+import { defineComponent } from 'vue'
+import Social from '~~/components/social/Social.vue'
 
 export default defineComponent({
   components: { Social },
@@ -129,5 +131,5 @@ export default defineComponent({
       default: false,
     },
   },
-});
+})
 </script>

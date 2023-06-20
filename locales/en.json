@@ -98,6 +98,26 @@
         "contact": {
             "title": "Contact",
             "subtitle": "Contact"
+        },
+        "account": {
+            "title": "Account",
+            "subtitle": "Account"
+        },
+        "wishlist": {
+            "title": "Wishlist",
+            "subtitle": "Wishlist" 
+        },
+        "cart": {
+            "title": "Cart",
+            "subtitle": "Cart" 
+        },
+        "checkout": {
+            "title": "Checkout",
+            "subtitle": "Checkout" 
+        },
+        "register": {
+            "title": "Register",
+            "subtitle": "Register" 
         }
     },
     "categories": {

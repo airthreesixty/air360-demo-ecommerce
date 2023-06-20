@@ -1,6 +1,6 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Checkout" subtitle="Checkout" />
+    <breadcrumb-area :title="$t('bread-crumb.checkout.title')" :subtitle="$t('bread-crumb.checkout.subtitle')" />
     <client-only>
       <div v-if="state.cart_products.length === 0" class="text-center pt-100 pb-100">
         <h3>No items found in cart to checkout</h3>
@@ -17,12 +17,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import Layout from "~~/layout/Layout.vue";
-import BreadcrumbArea from "~~/components/common/breadcrumb/BreadcrumbArea.vue";
-import CouponArea from "~~/components/checkout/CouponArea.vue";
-import CheckoutArea from "~~/components/checkout/CheckoutArea.vue";
-import { useCartStore } from "~~/store/useCart";
+import { defineComponent } from 'vue'
+import Layout from '~~/layout/Layout.vue'
+import BreadcrumbArea from '~~/components/common/breadcrumb/BreadcrumbArea.vue'
+import CouponArea from '~~/components/checkout/CouponArea.vue'
+import CheckoutArea from '~~/components/checkout/CheckoutArea.vue'
+import { useCartStore } from '~~/store/useCart'
 
 export default defineComponent({
   components: {
@@ -31,12 +31,12 @@ export default defineComponent({
     CouponArea,
     CheckoutArea,
   },
-  setup() {
-    const state = useCartStore();
+  setup () {
+    const state = useCartStore()
     useHead({
-      title: "Checkout",
-    });
-    return { state };
+      title: 'Checkout',
+    })
+    return { state }
   },
-});
+})
 </script>

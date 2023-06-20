@@ -98,6 +98,26 @@
         "contact": {
             "title": "コンタクト",
             "subtitle": "コンタクト"
+        },
+        "account": {
+            "title": "アカウント",
+            "subtitle": "アカウント"
+        },
+        "wishlist": {
+            "title": "ウィッシュリスト",
+            "subtitle": "ウィッシュリスト" 
+        },
+        "cart": {
+            "title": "カート",
+            "subtitle": "カート" 
+        },
+        "checkout": {
+            "title": "チェックアウト",
+            "subtitle": "チェックアウト" 
+        },
+        "register": {
+            "title": "アカウント作成",
+            "subtitle": "アカウント作成" 
         }
     },
     "categories": {
