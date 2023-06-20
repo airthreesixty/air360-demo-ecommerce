@@ -7,7 +7,6 @@
       <div class="categories">
         <div id="accordion">
           <div
-            class="card"
             v-for="(item, i) in [
               ...new Set(
                 categoryData.filter(
@@ -18,11 +17,11 @@
               ),
             ]"
             :key="item.id"
+            class="card"
           >
-            <div class="card-header white-bg" id="cloth">
+            <div id="cloth" class="card-header white-bg">
               <h5 class="mb-0">
                 <button
-                  @click="state.handleParentCategory(item.parentTitle)"
                   :class="`shop-accordion-btn collapsed text-capitalize ${
                     state.activeCls === item.parentTitle
                       ? 'active'
@@ -32,6 +31,7 @@
                   :data-bs-target="`#collapse-${i}`"
                   aria-expanded="false"
                   :aria-controls="`collapse-${i}`"
+                  @click="state.handleParentCategory(item.parentTitle)"
                 >
                   {{ item.parentTitle.toLowerCase() }}
                 </button>
@@ -48,11 +48,11 @@
                   <ul>
                     <li v-for="(list, i) in item.children" :key="i">
                       <a
-                        @click.prevent="state.handleCategory(list)"
                         href="#"
                         :class="`text-capitalize ${
                           state.activeCls === list ? 'active' : ''
                         }`"
+                        @click.prevent="state.handleCategory(list)"
                       >
                         {{ list.toLowerCase() }}
                       </a>
@@ -69,15 +69,15 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import categoryData from "~~/mixins/categoryData";
-import { useProductsStore } from "~~/store/useProducts";
+import { defineComponent } from 'vue'
+import categoryData from '~~/mixins/categoryData'
+import { useProductsStore } from '~~/store/useProducts'
 
 export default defineComponent({
   mixins: [categoryData],
-  setup() {
-    const state = useProductsStore();
-    return { state };
+  setup () {
+    const state = useProductsStore()
+    return { state }
   },
-});
+})
 </script>

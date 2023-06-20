@@ -1,15 +1,15 @@
 <template>
   <layout :transparent="true">
-    <breadcrumb-area title="Register" subtitle="Register"/>
-    <register-area/>
+    <breadcrumb-area title="Register" subtitle="Register" />
+    <register-area />
   </layout>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import Layout from "~~/layout/Layout.vue";
-import BreadcrumbArea from "~~/components/common/breadcrumb/BreadcrumbArea.vue";
-import RegisterArea from "~~/components/login-register/RegisterArea.vue";
+import { defineComponent } from 'vue'
+import Layout from '~~/layout/Layout.vue'
+import BreadcrumbArea from '~~/components/common/breadcrumb/BreadcrumbArea.vue'
+import RegisterArea from '~~/components/login-register/RegisterArea.vue'
 
 export default defineComponent({
   components: {
@@ -17,10 +17,10 @@ export default defineComponent({
     BreadcrumbArea,
     RegisterArea,
   },
-  setup() {
+  setup () {
     useHead({
-      title: "Register",
-    });
+      title: 'Register',
+    })
   },
-});
+})
 </script>

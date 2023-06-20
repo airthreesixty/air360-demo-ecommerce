@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-xl-12">
           <div class="header__search-inner text-center">
-            <form action="#">
+            <form action="#" @submit.prevent="filteredItems">
               <div class="header__search-btn" @click="showSearch = false">
                 <a href="#" class="header__search-btn-close">
                   <i class="fal fa-times" />
@@ -48,10 +48,11 @@
                 </ul>
               </div>
               <div class="header__search-input p-relative">
-                <input type="text" :placeholder="$t('nav.search.input-text')">
+                <input v-model="searchText" type="text" :placeholder="$t('nav.search.input-text')">
                 <button type="submit">
                   <i class="far fa-search" />
                 </button>
+                <p>{{ searchText }}</p>
               </div>
             </form>
           </div>
@@ -69,9 +70,26 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import productData from '../../../data/productData'
 
 export default defineComponent({
 //  emits:['searchPopup'],
+  setup () {
+    const searchText = ref('')
+    // store titles
+    // filter titles by the search keyword
+
+    const titles = productData.map(item => item.title)
+
+    const filteredItems = () => {
+      return titles.filter(title => title.includes(searchText.value))
+    }
+
+    return {
+      searchText,
+      filteredItems,
+    }
+  },
   data () {
     return {
       showSearch: false,
