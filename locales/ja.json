@@ -194,5 +194,16 @@
         "high-heels": {
             "title": "ハイヒール"
         }
+    },
+    "contact": {
+        "title": "ここからお問い合わせください",
+        "address": "住所",
+        "email": "メールアドレス",
+        "phone": "電話番号",
+        "contact-us": "コンタクト",
+        "name": "お名前",
+        "subject": "件名",
+        "message": "メッセージ",
+        "button": "送信"
     }
 }

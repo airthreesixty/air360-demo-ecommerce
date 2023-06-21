@@ -35,42 +35,42 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import blogData from "~~/mixins/blogData";
-import BlogSidebar from "../common/sidebar/BlogSidebar.vue";
-import Pagination from "~~/ui/Pagination.vue";
-import BlogType from "~~/types/blogType";
-import BlogStandardItem from "./BlogStandardItem.vue";
+import { defineComponent } from 'vue'
+import BlogSidebar from '../common/sidebar/BlogSidebar.vue'
+import BlogStandardItem from './BlogStandardItem.vue'
+import blogData from '~~/mixins/blogData'
+import Pagination from '~~/ui/Pagination.vue'
+import BlogType from '~~/types/blogType'
 
 export default defineComponent({
   components: { BlogSidebar, Pagination, BlogStandardItem },
-  props:{
-    left_side:{
-      type:Boolean,
-      default:false,
-    }
+  mixins: [blogData],
+  props: {
+    left_side: {
+      type: Boolean,
+      default: false,
+    },
   },
-  data() {
+  setup () {
+    return {}
+  },
+  data () {
     return {
       filteredRows: [] as BlogType[],
       pageStart: 0 as number,
       countOfPage: 9 as number,
-    };
+    }
   },
-  mixins: [blogData],
   methods: {
-    paginatedData(
+    paginatedData (
       filteredRows: BlogType[],
       pageStart: number,
-      countOfPage: number
+      countOfPage: number,
     ) {
-      this.filteredRows = filteredRows;
-      this.pageStart = pageStart;
-      this.countOfPage = countOfPage;
+      this.filteredRows = filteredRows
+      this.pageStart = pageStart
+      this.countOfPage = countOfPage
     },
   },
-  setup() {
-    return {};
-  },
-});
+})
 </script>

@@ -10,7 +10,7 @@
         </form>
       </div>
     </div>
-    <div class="sidebar__widget mb-55">
+    <!-- <div class="sidebar__widget mb-55">
       <div class="sidebar__widget-title mb-25">
         <h3>Product Categories</h3>
       </div>
@@ -61,7 +61,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="sidebar__widget mb-55">
       <div class="sidebar__widget-title mb-25">
         <h3>Latest Posts</h3>
@@ -140,7 +140,7 @@
         </div>
       </div>
     </div>
-    <div class="sidebar__widget mb-55">
+    <!-- <div class="sidebar__widget mb-55">
       <div class="sidebar__widget-title mb-25">
         <h3>Meta</h3>
       </div>
@@ -154,7 +154,7 @@
           </ul>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

@@ -194,5 +194,16 @@
         "high-heels": {
             "title": "High Heels"
         }
+    },
+    "contact": {
+        "title": "Find us here.",
+        "address": "Address",
+        "email": "Email",
+        "phone": "Phone number",
+        "contact-us": "Contact Us",
+        "name": "Name",
+        "subject": "Subject",
+        "message": "Message",
+        "button": "SEND MESSAGE"
     }
 }
