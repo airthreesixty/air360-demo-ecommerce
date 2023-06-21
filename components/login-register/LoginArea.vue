@@ -4,7 +4,9 @@
       <div class="row">
         <div class="col-lg-8 offset-lg-2">
           <div class="basic-login">
-            <h3 class="text-center mb-60">Login From Here</h3>
+            <h3 class="text-center mb-60">
+              {{ $t('login.title') }}
+            </h3>
             <!-- form start -->
             <login-form />
             <!-- form end -->
@@ -16,13 +18,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import LoginForm from "../forms/LoginForm.vue";
+import { defineComponent } from 'vue'
+import LoginForm from '../forms/LoginForm.vue'
 
 export default defineComponent({
   components: { LoginForm },
-  setup() {
-    return {};
+  setup () {
+    return {}
   },
-});
+})
 </script>

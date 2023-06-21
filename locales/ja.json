@@ -118,6 +118,10 @@
         "register": {
             "title": "アカウント作成",
             "subtitle": "アカウント作成" 
+        },
+        "login": {
+            "title": "ログイン",
+            "subtitle": "ログイン"
         }
     },
     "categories": {
@@ -223,6 +227,25 @@
         "password": "パスワード",
         "register": "アカウントの作成",
         "or": "又は",
-        "login": "ログイン"
+        "login": "ログイン",
+        "placeholder": {
+            "username": "ユーザー名を入力してください",
+            "email": "メールアドレスを入力してください",
+            "password": "パスワードを入力してください"
+        }
+    },
+    "login": {
+        "title": "ログイン",
+        "email": "メールアドレス",
+        "password": "パスワード",
+        "remember-me": "ログイン情報を保存",
+        "lost-password": "パスワードを忘れましたか？",
+        "login": "ログイン",
+        "or": "又は",
+        "register": "アカウントを作成",
+        "placeholder": {
+            "email": "メールアドレスを入力してください",
+            "password": "パスワードを入力してください"
+        }
     }
 }

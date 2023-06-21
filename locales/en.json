@@ -118,6 +118,10 @@
         "register": {
             "title": "Register",
             "subtitle": "Register" 
+        },
+        "login": {
+            "title": "ログイン",
+            "subtitle": "ログイン"
         }
     },
     "categories": {
@@ -223,6 +227,25 @@
         "password": "Password",
         "register": "REGISTER NOW",
         "or": "or",
-        "login": "LOGIN"
+        "login": "LOGIN",
+        "placeholder": {
+            "username": "Enter username...",
+            "email": "Enter address...",
+            "password": "Enter password..."
+        }
+    },
+    "login": {
+        "title": "Login From Here",
+        "email": "Email Address",
+        "password": "Password",
+        "remember-me": "Remember Me",
+        "lost-password": "Lost your password?",
+        "login": "Login",
+        "or": "or",
+        "register": "Register",
+        "placeholder": {
+            "email": "Enter address...",
+            "password": "Enter password..."
+        }
     }
 }

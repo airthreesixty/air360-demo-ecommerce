@@ -2,19 +2,19 @@
   <Form :validation-schema="schema" @submit="onSubmit">
     <div class="mb-20">
       <label for="name">{{ $t('signup.username') }}<span>**</span></label>
-      <Field id="name" name="name" type="text" placeholder="Enter Username" />
+      <Field id="name" name="name" type="text" :placeholder="$t('signup.placeholder.username')" />
       <ErrorMessage name="name" class="text-danger" />
     </div>
 
     <div class="mb-20">
       <label for="email-id">{{ $t('signup.email') }}<span>**</span></label>
-      <Field id="email-id" name="email" type="text" placeholder="Email address..." />
+      <Field id="email-id" name="email" type="text" :placeholder="$t('signup.placeholder.email')" />
       <ErrorMessage name="email" class="text-danger" />
     </div>
 
     <div class="mb-20">
       <label for="pass">{{ $t('signup.password') }} <span>**</span></label>
-      <Field id="pass" name="password" type="password" placeholder="Enter password..." />
+      <Field id="pass" name="password" type="password" :placeholder="$t('signup.placeholder.password')" />
       <ErrorMessage name="password" class="text-danger" />
     </div>
 
