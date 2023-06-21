@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar__widget">
     <div class="sidebar__widget-title mb-30">
-      <h3>Featured Products</h3>
+      <h3>{{ $t('featured-products.title') }}</h3>
     </div>
     <div class="sidebar__widget-content">
       <div class="features__product">
@@ -16,7 +16,8 @@
               <div class="features__product-content">
                 <h5>
                   <nuxt-link :href="`/product-details/${item.id}`">
-                    <span v-html="item.title" />
+                    <!-- <span v-html="item.title" /> -->
+                    <span>{{ $t(`${item.title}.title`) }}</span>
                   </nuxt-link>
                 </h5>
                 <div class="price">

@@ -31,14 +31,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import PriceFilter from "./filter-widget/PriceFilter.vue";
-import ProductBrands from "./filter-widget/ProductBrands.vue";
-import ProductCategory from "./filter-widget/ProductCategory.vue";
-import ProductColor from "./filter-widget/ProductColor.vue";
-import ProductsFeatured from "./filter-widget/ProductsFeatured.vue";
-import ProductSizes from "./filter-widget/ProductSizes.vue";
-import ResetButton from "./filter-widget/ResetButton.vue";
+import { defineComponent } from 'vue'
+import PriceFilter from './filter-widget/PriceFilter.vue'
+import ProductBrands from './filter-widget/ProductBrands.vue'
+import ProductCategory from './filter-widget/ProductCategory.vue'
+import ProductColor from './filter-widget/ProductColor.vue'
+import ProductsFeatured from './filter-widget/ProductsFeatured.vue'
+import ProductSizes from './filter-widget/ProductSizes.vue'
+import ResetButton from './filter-widget/ResetButton.vue'
 
 export default defineComponent({
   components: {
@@ -50,8 +50,8 @@ export default defineComponent({
     ResetButton,
     ProductsFeatured,
   },
-  setup() {
-    return {};
+  setup () {
+    return {}
   },
-});
+})
 </script>

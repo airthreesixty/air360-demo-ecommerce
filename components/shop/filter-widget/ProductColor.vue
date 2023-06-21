@@ -1,7 +1,7 @@
 <template>
   <div class="sidebar__widget mb-60">
     <div class="sidebar__widget-title mb-20">
-      <h3>Choose Color</h3>
+      <h3>{{ $t('sidebar-products.choose-color') }}</h3>
     </div>
     <div class="sidebar__widget-content">
       <div class="color__pick">
@@ -9,11 +9,10 @@
           <ul>
             <li v-for="(color, i) in allColor?.slice(0, 8)" :key="i">
               <button
-                @click.prevent="state.handleColor(color)"
                 type="button"
                 :class="`color color-${i + 1} ${state.activeCls === color ? `active-${i+1}` : ''}`"
-              >
-            </button>
+                @click.prevent="state.handleColor(color)"
+              />
             </li>
           </ul>
         </form>
@@ -23,18 +22,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { useProductsStore } from "~~/store/useProducts";
+import { defineComponent } from 'vue'
+import { useProductsStore } from '~~/store/useProducts'
 
 export default defineComponent({
-  setup() {
-    const state = useProductsStore();
-    let allColor = [] as any;
+  setup () {
+    const state = useProductsStore()
+    let allColor = [] as any
     state.products.forEach((product) => {
-      let uniqueColor = new Set(product.colors);
-      allColor = [...new Set([...allColor, ...uniqueColor])];
-    });
-    return { state, allColor };
+      const uniqueColor = new Set(product.colors)
+      allColor = [...new Set([...allColor, ...uniqueColor])]
+    })
+    return { state, allColor }
   },
-});
+})
 </script>

@@ -252,5 +252,14 @@
         "address": "所在地",
         "email": "メールアドレス",
         "phone": "電話番号"
+    },
+    "sidebar-products": {
+        "filter-by-price": "価格で絞り込む",
+        "filter": "絞り込む",
+        "price": "値段",
+        "any-size": "サイズ",
+        "choose-color": "色を選ぶ",
+        "brand": "ブランド",
+        "reset-filter": "フィルターをリセット"
     }
 }

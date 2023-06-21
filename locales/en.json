@@ -252,5 +252,14 @@
         "address": "Add",
         "email": "Email",
         "phone": "Phone Number"
+    },
+    "sidebar-products": {
+        "filter-by-price": "Filter By Price",
+        "filter": "Filter",
+        "price": "Price",
+        "any-size": "Any Size",
+        "choose-color": "Choose Color",
+        "brand": "Brand",
+        "reset-filter": "RESET FILTER"
     }
 }
