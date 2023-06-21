@@ -23,7 +23,7 @@
                         <i class="fal fa-map-marker-alt" />
                       </div>
                       <div class="text">
-                        <span>Add: 1234 Heaven Stress, Beverly Hill, Melbourne,
+                        <span>{{ $t('footer.address') }}: 1234 Heaven Stress, Beverly Hill, Melbourne,
                           USA.</span>
                       </div>
                     </li>
@@ -32,7 +32,7 @@
                         <i class="fal fa-envelope-open-text" />
                       </div>
                       <div class="text">
-                        <span>Email: Contact@basictheme.com</span>
+                        <span>{{ $t('footer.email') }}: Contact@basictheme.com</span>
                       </div>
                     </li>
                     <li>
@@ -40,7 +40,7 @@
                         <i class="fal fa-phone-alt" />
                       </div>
                       <div class="text">
-                        <span>Phone Number: (800) 123 456 789</span>
+                        <span>{{ $t('footer.phone') }}: (800) 123 456 789</span>
                       </div>
                     </li>
                   </ul>
@@ -97,9 +97,6 @@
                 <nuxt-link href="/">
                   Outstock
                 </nuxt-link> all rights reserved.
-                Powered by <nuxt-link href="/">
-                  Theme_pure
-                </nuxt-link>
               </p>
             </div>
           </div>

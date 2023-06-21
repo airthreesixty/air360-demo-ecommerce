@@ -247,5 +247,10 @@
             "email": "Enter address...",
             "password": "Enter password..."
         }
+    },
+    "footer": {
+        "address": "Add",
+        "email": "Email",
+        "phone": "Phone Number"
     }
 }
