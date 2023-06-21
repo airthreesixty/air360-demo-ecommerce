@@ -210,5 +210,10 @@
         "latest-posts": "最新の記事",
         "recent-comments": "最近のコメント",
         "archives": "アーカイブ"
+    },
+    "cart-mini": {
+        "subtotal": "小計",
+        "view-cart": "カートを見る",
+        "checkout": "お会計"
     }
 }

@@ -210,5 +210,10 @@
         "latest-posts": "Latest Posts",
         "recent-comments": "Recent Comments",
         "archives": "Archives"
+    },
+    "cart-mini": {
+        "subtotal": "Subtotal",
+        "view-cart": "VIEW CART",
+        "checkout": "CHECKOUT"
     }
 }

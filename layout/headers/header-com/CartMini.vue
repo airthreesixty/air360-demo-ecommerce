@@ -17,7 +17,8 @@
           <div class="cart-content f-left text-left">
             <h5>
               <nuxt-link :href="`/product-details/${item.id}`">
-                <span v-html="item.title" />
+                <!-- <span v-html="item.title" /> -->
+                <span>{{ $t(`${item.title}.title`) }}</span>
               </nuxt-link>
             </h5>
             <div class="cart-price">
@@ -33,15 +34,15 @@
         </li>
       </ul>
       <div class="total-price d-flex justify-content-between mb-30">
-        <span>Subtotal:</span>
+        <span>{{ $t('cart-mini.subtotal') }}:</span>
         <span>${{ store.totalPriceQuantity.total.toFixed(2) }}</span>
       </div>
       <div class="checkout-link">
         <nuxt-link href="/cart" class="os-btn">
-          view Cart
+          {{ $t('cart-mini.view-cart') }}
         </nuxt-link>
         <nuxt-link class="os-btn os-btn-black" href="/checkout">
-          Checkout
+          {{ $t('cart-mini.checkout') }}
         </nuxt-link>
       </div>
     </div>
