@@ -30,7 +30,7 @@
         "wish-list": "ウィッシュリスト",
         "cart": "カート",
         "checkout": "チェックアウト",
-        "create-account": "アカウントを作成する",
+        "create-account": "アカウントの作成",
         "language": {
             "title": "言語",
             "japanese": "日本語",
@@ -215,5 +215,14 @@
         "subtotal": "小計",
         "view-cart": "カートを見る",
         "checkout": "お会計"
+    },
+    "signup": {
+        "title": "会員登録",
+        "username": "ユーザー名",
+        "email": "メールアドレス",
+        "password": "パスワード",
+        "register": "アカウントの作成",
+        "or": "又は",
+        "login": "ログイン"
     }
 }

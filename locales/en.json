@@ -215,5 +215,14 @@
         "subtotal": "Subtotal",
         "view-cart": "VIEW CART",
         "checkout": "CHECKOUT"
+    },
+    "signup": {
+        "title": "Signup From Here",
+        "username": "Username",
+        "email": "Email Address",
+        "password": "Password",
+        "register": "REGISTER NOW",
+        "or": "or",
+        "login": "LOGIN"
     }
 }

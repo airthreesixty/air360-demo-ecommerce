@@ -5,7 +5,7 @@
         <div class="col-lg-8 offset-lg-2">
           <div class="basic-login">
             <h3 class="text-center mb-60">
-              Signup From Here
+              {{ $t('signup.title') }}
             </h3>
             <register-form />
           </div>

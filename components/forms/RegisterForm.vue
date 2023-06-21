@@ -1,32 +1,32 @@
 <template>
   <Form :validation-schema="schema" @submit="onSubmit">
     <div class="mb-20">
-      <label for="name">Username <span>**</span></label>
+      <label for="name">{{ $t('signup.username') }}<span>**</span></label>
       <Field id="name" name="name" type="text" placeholder="Enter Username" />
       <ErrorMessage name="name" class="text-danger" />
     </div>
 
     <div class="mb-20">
-      <label for="email-id">Email Address <span>**</span></label>
+      <label for="email-id">{{ $t('signup.email') }}<span>**</span></label>
       <Field id="email-id" name="email" type="text" placeholder="Email address..." />
       <ErrorMessage name="email" class="text-danger" />
     </div>
 
     <div class="mb-20">
-      <label for="pass">Password <span>**</span></label>
+      <label for="pass">{{ $t('signup.password') }} <span>**</span></label>
       <Field id="pass" name="password" type="password" placeholder="Enter password..." />
       <ErrorMessage name="password" class="text-danger" />
     </div>
 
     <div class="mt-10" />
     <button type="submit" class="os-btn w-100">
-      Register Now
+      {{ $t('signup.register') }}
     </button>
     <div class="or-divide">
-      <span>or</span>
+      <span>{{ $t('signup.or') }}</span>
     </div>
     <nuxt-link href="/login" class="os-btn os-btn-black w-100">
-      login Now
+      {{ $t('signup.login') }}
     </nuxt-link>
   </Form>
 </template>
@@ -46,7 +46,8 @@ export default defineComponent({
     })
 
     function onSubmit (values: object, { resetForm }: {resetForm: () => void}) {
-      alert(JSON.stringify(values, null, 2))
+      // alert(JSON.stringify(values, null, 2))
+      alert("You're not allowed to create an account.")
       resetForm()
     }
     return { schema, onSubmit }

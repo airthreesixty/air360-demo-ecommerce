@@ -6,11 +6,11 @@
           <h5>{{ $t('menu.my-account') }}</h5>
         </div>
         <ul>
-          <li>
+          <!-- <li>
             <nuxt-link :to="localePath('/account')">
               {{ $t('menu.my-account') }}
             </nuxt-link>
-          </li>
+          </li> -->
           <li>
             <nuxt-link :to="localePath('/wishlist')">
               {{ $t('menu.wish-list') }}
