@@ -27,7 +27,7 @@
     <div class="or-divide">
       <span>or</span>
     </div>
-    <nuxt-link href="/register" class="os-btn os-btn-black w-100">
+    <nuxt-link :to="localePath('/register')" class="os-btn os-btn-black w-100">
       {{ $t('login.register') }}
     </nuxt-link>
   </Form>
@@ -41,16 +41,18 @@ import * as yup from 'yup'
 export default defineComponent({
   components: { Field, Form, ErrorMessage },
   setup () {
+    const localePath = useLocalePath()
     const schema = yup.object({
       email: yup.string().required().email().label('Email'),
       password: yup.string().required().min(6).label('Password'),
     })
 
     function onSubmit (values: object, { resetForm }: {resetForm: () => void}) {
-      alert(JSON.stringify(values, null, 2))
+      // alert(JSON.stringify(values, null, 2))
+      alert("You're not allowed to login")
       resetForm()
     }
-    return { schema, onSubmit }
+    return { schema, onSubmit, localePath }
   },
 })
 </script>

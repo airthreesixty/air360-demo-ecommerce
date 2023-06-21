@@ -25,7 +25,7 @@
     <div class="or-divide">
       <span>{{ $t('signup.or') }}</span>
     </div>
-    <nuxt-link href="/login" class="os-btn os-btn-black w-100">
+    <nuxt-link :to="localePath('/login')" class="os-btn os-btn-black w-100">
       {{ $t('signup.login') }}
     </nuxt-link>
   </Form>
@@ -39,6 +39,7 @@ import * as yup from 'yup'
 export default defineComponent({
   components: { Field, Form, ErrorMessage },
   setup () {
+    const localePath = useLocalePath()
     const schema = yup.object({
       name: yup.string().required().label('Name'),
       email: yup.string().required().email().label('Email'),
@@ -50,7 +51,7 @@ export default defineComponent({
       alert("You're not allowed to create an account.")
       resetForm()
     }
-    return { schema, onSubmit }
+    return { schema, onSubmit, localePath }
   },
 })
 </script>
