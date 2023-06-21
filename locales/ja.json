@@ -135,5 +135,64 @@
         "shirt": "シャツ",
         "fashion-women": "レディース",
         "shoes": "シューズ"
+    },
+    "products": {
+        "lamp": {
+            "title": "照明"
+        },
+        "lamp-for-home": {
+            "title": "照明(家用)"
+        },
+        "body-oil": {
+            "title": "ボディーオイル"
+        },
+        "fragrance": {
+            "title": "香水"
+        },
+        "survival-knife": {
+            "title": "サバイバルナイフ"
+        },
+        "scarf": {
+            "title": "マフラー"
+        },
+        "wooden-spoon": {
+            "title": "木製スプーン"
+        },
+        "hand-bag": {
+            "title": "ハンドバッグ"
+        },
+        "luxury-bag": {
+            "title": "ラグジュアリバッグ"
+        },
+        "shorts": {
+            "title": "短パン"
+        },
+        "antique-lamp": {
+            "title": "アンティークランプ"
+        },
+        "adrianna-papell": {
+            "title": "アドリアナ　パペル"
+        },
+        "calvin-klein-women": {
+            "title": "カルバンクライン　緑のドレス"
+        },
+        "humidifier": {
+            "title":  "加湿器"
+        },
+        "heart-t-shirt": {
+            "title": "ハート柄Tシャツ"
+        },
+        "knitted-hat": {
+            "title": "ニット帽"
+        },
+        "cool-jacket": {
+            "title": "かっこいいジャケット"
+        },
+        "sophisticated-dress": {
+            "title": "洗練されたドレス"
+        },
+        "high-heels": {
+            "title": "ハイヒール"
+        }
     }
 }

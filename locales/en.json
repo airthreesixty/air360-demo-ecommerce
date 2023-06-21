@@ -135,5 +135,64 @@
         "shirt": "Shirt",
         "fashion-women": "For Women's Fashion",
         "shoes": "Shoes"
+    },
+    "products": {
+        "lamp": {
+            "title": "Lamp"
+        },
+        "lamp-for-home": {
+            "title": "Lamp For Home"
+        },
+        "body-oil": {
+            "title": "Body Oil"
+        },
+        "fragrance": {
+            "title": "Fragrance"
+        },
+        "survival-knife": {
+            "title": "Survival Knife"
+        },
+        "scarf": {
+            "title": "Scarf"
+        },
+        "wooden-spoon": {
+            "title": "Wooden Spoon"
+        },
+        "hand-bag": {
+            "title": "Hand Bag"
+        },
+        "luxury-bag": {
+            "title": "Luxury Bag"
+        },
+        "shorts": {
+            "title": "Shorts"
+        },
+        "antique-lamp": {
+            "title": "Antique lamp"
+        },
+        "adrianna-papell": {
+            "title": "Adrianna Papell"
+        },
+        "calvin-klein-women": {
+            "title": "Calvin Klein Green Dress"
+        },
+        "humidifier": {
+            "title":  "Humidifier"
+        },
+        "heart-t-shirt": {
+            "title": "Heart-patterned T-shirts"
+        },
+        "knitted-hat": {
+            "title": "Knitted Hat"
+        },
+        "cool-jacket": {
+            "title": "Cool Jacket"
+        },
+        "sophisticated-dress": {
+            "title": "Sophisticated Dress"
+        },
+        "high-heels": {
+            "title": "High Heels"
+        }
     }
 }

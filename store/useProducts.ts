@@ -12,13 +12,10 @@ export const useProductsStore = defineStore('products', {
   }),
   actions: {
     handleParentCategory (value: string) {
-      const router = useRouter()
       this.filterProducts = this.products.filter(
         p => p.parentCategory.toLowerCase() === value.toLowerCase(),
       )
       this.activeCls = value
-
-      console.log(router)
     },
     handleCategory (value: string) {
       this.filterProducts = this.products.filter(

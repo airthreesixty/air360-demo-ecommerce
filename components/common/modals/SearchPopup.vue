@@ -75,11 +75,13 @@ import productData from '../../../data/productData'
 export default defineComponent({
 //  emits:['searchPopup'],
   setup () {
+    const { t } = useI18n()
     const searchText = ref('')
     // store titles
     // filter titles by the search keyword
 
-    const titles = productData.map(item => item.title)
+    const titles = productData.map(item => t(`${item.title}.title`))
+    console.log(titles)
 
     const filteredItems = () => {
       return titles.filter(title => title.includes(searchText.value))
