@@ -64,7 +64,7 @@
     </div> -->
     <div class="sidebar__widget mb-55">
       <div class="sidebar__widget-title mb-25">
-        <h3>Latest Posts</h3>
+        <h3>{{ $t('blog.latest-posts') }}</h3>
       </div>
       <div class="sidebar__widget-content">
         <div class="rc__post-wrapper">
@@ -96,7 +96,7 @@
     </div>
     <div class="sidebar__widget mb-55">
       <div class="sidebar__widget-title mb-25">
-        <h3>Recent Comments</h3>
+        <h3>{{ $t('blog.recent-comments') }}</h3>
       </div>
       <div class="sidebar__widget-content">
         <div class="rc__comments">
@@ -127,7 +127,7 @@
     </div>
     <div class="sidebar__widget mb-55">
       <div class="sidebar__widget-title mb-25">
-        <h3>Archives</h3>
+        <h3>{{ $t('blog.archives') }}</h3>
       </div>
       <div class="sidebar__widget-content">
         <div class="sidebar__links">

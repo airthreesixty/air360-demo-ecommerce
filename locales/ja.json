@@ -205,5 +205,10 @@
         "subject": "件名",
         "message": "メッセージ",
         "button": "送信"
+    },
+    "blog": {
+        "latest-posts": "最新の記事",
+        "recent-comments": "最近のコメント",
+        "archives": "アーカイブ"
     }
 }

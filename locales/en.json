@@ -205,5 +205,10 @@
         "subject": "Subject",
         "message": "Message",
         "button": "SEND MESSAGE"
+    },
+    "blog": {
+        "latest-posts": "Latest Posts",
+        "recent-comments": "Recent Comments",
+        "archives": "Archives"
     }
 }
