@@ -3,7 +3,7 @@
     <div class="product__thumb">
       <nuxt-link :href="`/product-details/${item.id}`" class="w-img">
         <img :src="item.img" alt="product-img">
-        <img class="product__thumb-2" :src="item.thumb_img" alt="product-img">
+        <!-- <img class="product__thumb-2" :src="item.thumb_img" alt="product-img"> -->
       </nuxt-link>
       <div class="product__action transition-3">
         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Wishlist" @click.prevent="wishlistState.add_wishlist_product(item)">
