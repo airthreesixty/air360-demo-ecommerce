@@ -1,12 +1,12 @@
 import { log } from 'console'
 import { defineStore } from 'pinia'
-import productData from '~~/data/productData'
+import productData from '~/mixins/productData'
 import ProductType from '~~/types/productType'
 
 export const useProductsStore = defineStore('products', {
   state: () => ({
-    products: productData as ProductType[],
-    filterProducts: productData as ProductType[],
+    products: productData.data().productData as ProductType[],
+    filterProducts: productData.data().productData as ProductType[],
     priceRange: [0, 500] as any,
     activeCls: '' as string,
   }),

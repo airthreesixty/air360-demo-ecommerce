@@ -6,33 +6,36 @@
           <div class="coupon-accordion">
             <!-- ACCORDION START -->
             <h3>
-              Returning customer?
-              <span @click="handleCheckoutLogin" id="showlogin">Click here to login</span>
+              {{ $t('checkout.returning') }}
+              <span id="showlogin" @click="handleCheckoutLogin">{{ $t('checkout.click-here-to-login') }}</span>
             </h3>
             <div v-if="checkoutLogin" id="checkout-login" class="coupon-content">
               <div class="coupon-info">
                 <p class="coupon-text">
-                  Quisque gravida turpis sit amet nulla posuere lacinia. Cras
-                  sed est sit amet ipsum luctus.
+                  {{ $t('checkout.login.description') }}
                 </p>
                 <form @submit.prevent="handleSubmit">
                   <p class="form-row-first">
-                    <label>Username or email <span class="required">*</span></label>
-                    <input type="text" v-model="formValue.name_or_email" />
+                    <label>{{ $t('checkout.login.user-info') }} <span class="required">*</span></label>
+                    <input v-model="formValue.name_or_email" type="text">
                   </p>
                   <p class="form-row-last">
-                    <label>Password <span class="required">*</span></label>
-                    <input type="text" v-model="formValue.password" />
+                    <label>{{ $t('checkout.login.password') }} <span class="required">*</span></label>
+                    <input v-model="formValue.password" type="text">
                   </p>
                   <p class="form-row">
-                    <button class="os-btn os-btn-black" type="submit">Login</button>
+                    <button class="os-btn os-btn-black" type="submit">
+                      {{ $t('checkout.login.button') }}
+                    </button>
                     <label>
-                      <input type="checkbox" v-model="formValue.isChecked" />
-                      Remember me
+                      <input v-model="formValue.isChecked" type="checkbox">
+                      {{ $t('checkout.login.remember-me') }}
                     </label>
                   </p>
                   <p class="lost-password">
-                    <nuxt-link href="/login">Lost your password?</nuxt-link>
+                    <nuxt-link :to="localePath('/login')">
+                      {{ $t('checkout.login.user-info') }}
+                    </nuxt-link>
                   </p>
                 </form>
               </div>
@@ -44,15 +47,17 @@
           <div class="coupon-accordion">
             <!-- ACCORDION START -->
             <h3>
-              Have a coupon?
-              <span @click="handleCheckoutCoupon" id="showcoupon">Click here to enter your code</span>
+              {{ $t('checkout.have-a-coupon') }}
+              <span id="showcoupon" @click="handleCheckoutCoupon">{{ $t('checkout.click-here-to-enter') }}</span>
             </h3>
             <div v-if="checkoutCoupon" id="checkout_coupon" class="coupon-checkout-content">
               <div class="coupon-info">
                 <form @submit.prevent="handleCouponSubmit">
                   <p class="checkout-coupon">
-                    <input v-model="couponVal" type="text" placeholder="Coupon Code" />
-                    <button class="os-btn os-btn-black" type="submit">Apply Coupon</button>
+                    <input v-model="couponVal" type="text" :placeholder="$t('checkout.coupon-code')">
+                    <button class="os-btn os-btn-black" type="submit">
+                      {{ $t('checkout.coupon') }}
+                    </button>
                   </p>
                 </form>
               </div>
@@ -65,9 +70,8 @@
   </section>
 </template>
 
-
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from 'vue'
 
 interface formValueType {
   name_or_email:string,
@@ -76,33 +80,38 @@ interface formValueType {
 }
 
 export default defineComponent({
-  data () {
+  setup () {
+    const localePath = useLocalePath()
     return {
-      checkoutLogin:false,
-      checkoutCoupon:false,
-      formValue: {
-        name_or_email: "",
-        password: "",
-        isChecked: false,
-      } as formValueType,
-      couponVal:''
+      localePath,
     }
   },
-  methods:{
+  data () {
+    return {
+      checkoutLogin: false,
+      checkoutCoupon: false,
+      formValue: {
+        name_or_email: '',
+        password: '',
+        isChecked: false,
+      } as formValueType,
+      couponVal: '',
+    }
+  },
+  methods: {
     handleCheckoutLogin () {
       this.checkoutLogin = !this.checkoutLogin
     },
     handleCheckoutCoupon () {
       this.checkoutCoupon = !this.checkoutCoupon
     },
-    handleSubmit() {
-      this.formValue = {} as formValueType;
+    handleSubmit () {
+      this.formValue = {} as formValueType
     },
-    handleCouponSubmit() {
-      console.log(this.couponVal);
-      this.couponVal = '';
+    handleCouponSubmit () {
+      console.log(this.couponVal)
+      this.couponVal = ''
     },
-  }
+  },
 })
 </script>
-

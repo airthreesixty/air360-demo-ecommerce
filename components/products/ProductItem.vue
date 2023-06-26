@@ -1,7 +1,7 @@
 <template>
   <div class="product__wrapper mb-60">
     <div class="product__thumb">
-      <nuxt-link :href="`/product-details/${item.id}`" class="w-img">
+      <nuxt-link :to="localePath(`/product-details/${item.id}`)" class="w-img">
         <img :src="item.img" alt="product-img">
         <!-- <img class="product__thumb-2" :src="item.thumb_img" alt="product-img"> -->
       </nuxt-link>
@@ -9,9 +9,9 @@
         <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Add to Wishlist" @click.prevent="wishlistState.add_wishlist_product(item)">
           <i class="fal fa-heart" />
         </a>
-        <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Compare" @click.prevent="compareState.add_compare_product(item)">
+        <!-- <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Compare" @click.prevent="compareState.add_compare_product(item)">
           <i class="fal fa-sliders-h" />
-        </a>
+        </a> -->
         <!-- Button trigger modal -->
         <a href="#" data-bs-toggle="modal" :data-bs-target="`#productModalId-${item.id}`" @click.prevent="store.initialOrderQuantity">
           <i class="fal fa-search" />
@@ -24,7 +24,7 @@
     </div>
     <div class="product__content p-relative">
       <div class="product__content-inner">
-        <nuxt-link :href="`/product-details/${item.id}`">
+        <nuxt-link :to="localePath(`/product-details/${item.id}`)">
           <span>{{ $t(`${item.title}.title`) }}</span>
         </nuxt-link>
         <div class="product__price transition-3">
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="add-cart p-absolute transition-3">
-        <a href="#" @click.prevent="store.add_cart_product(item)">+ Add to Cart</a>
+        <a href="#" @click.prevent="store.add_cart_product(item, $t(`${item.title}.title`), $t('added-to-cart'))">+ Add to Cart</a>
       </div>
     </div>
   </div>
@@ -64,7 +64,8 @@ export default defineComponent({
     const store = useCartStore()
     const wishlistState = useWishlistStore()
     const compareState = useCompareStore()
-    return { store, wishlistState, compareState }
+    const localePath = useLocalePath()
+    return { store, wishlistState, compareState, localePath }
   },
 })
 </script>

@@ -10,13 +10,13 @@
       >
         <li v-for="(item,i) in store.cart_products" :key="i">
           <div class="cart-img f-left">
-            <nuxt-link :href="`/product-details/${item.id}`">
+            <nuxt-link :to="localePath(`/product-details/${item.id}`)">
               <img :src="item.img" alt="">
             </nuxt-link>
           </div>
           <div class="cart-content f-left text-left">
             <h5>
-              <nuxt-link :href="`/product-details/${item.id}`">
+              <nuxt-link :to="localePath(`/product-details/${item.id}`)">
                 <!-- <span v-html="item.title" /> -->
                 <span>{{ $t(`${item.title}.title`) }}</span>
               </nuxt-link>
@@ -26,7 +26,7 @@
               <span class="price">$ {{ item.price }}</span>
             </div>
           </div>
-          <div class="del-icon f-right mt-30" @click="store.remover_cart_products(item)">
+          <div class="del-icon f-right mt-30" @click="store.remover_cart_products(item, $t(`${item.title}.title`), $t('remove-from-cart'))">
             <a href="#">
               <i class="fal fa-times" />
             </a>
@@ -38,10 +38,10 @@
         <span>${{ store.totalPriceQuantity.total.toFixed(2) }}</span>
       </div>
       <div class="checkout-link">
-        <nuxt-link href="/cart" class="os-btn">
+        <nuxt-link :to="localePath('/cart')" class="os-btn">
           {{ $t('cart-mini.view-cart') }}
         </nuxt-link>
-        <nuxt-link class="os-btn os-btn-black" href="/checkout">
+        <nuxt-link class="os-btn os-btn-black" :to="localePath('/checkout')">
           {{ $t('cart-mini.checkout') }}
         </nuxt-link>
       </div>
@@ -56,7 +56,8 @@ import { useCartStore } from '~~/store/useCart'
 export default defineComponent({
   setup () {
     const store = useCartStore()
-    return { store }
+    const localePath = useLocalePath()
+    return { store, localePath }
   },
 })
 </script>

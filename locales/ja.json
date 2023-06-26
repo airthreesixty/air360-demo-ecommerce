@@ -122,6 +122,10 @@
         "login": {
             "title": "ログイン",
             "subtitle": "ログイン"
+        },
+        "details": {
+            "title": "製品詳細",
+            "subtitle": "製品詳細"
         }
     },
     "categories": {
@@ -261,5 +265,111 @@
         "choose-color": "色を選ぶ",
         "brand": "ブランド",
         "reset-filter": "フィルターをリセット"
-    }
+    },
+    "details": {
+        "size": "サイズ",
+        "please-select": "選択してください",
+        "color": "色",
+        "required": "必須項目",
+        "quantity": "数量",
+        "add-to-cart": "カートに入れる",
+        "description": "商品説明",
+        "additional-information": "追加情報",
+        "reviews": "レビュー",
+        "weight": "重さ",
+        "dimention": "寸法",        
+        "related-products": {
+            "title": "関連商品",
+            "description": "お客様の経験を高め、既存のセットアップを完璧に補完する当社の製品をご覧ください。"
+        }
+    },
+    "cart": {
+        "no-cart": "カートに商品はありません",
+        "shop-now": "今すぐ購入",
+        "image": "画像",
+        "product": "商品",
+        "unit-price": "単価",
+        "quantity": "数量",
+        "total": "合計",
+        "remove": "削除",
+        "coupon": "クーポンを使う",
+        "coupon-code": "クーポンコード",
+        "clear-cart": "カートを空にする",
+        "cart-totals": "カートの合計",
+        "subtotal": "小計",
+        "checkout": "会計に進む"
+    },
+    "checkout": {
+        "returning": "前回ご利用いただいたお客様ですか？",
+        "click-here-to-login": "ログインはこちらをクリック",
+        "login": {
+            "description": "ログイン情報を入力してください",
+            "user-info": "ユーザー名、又はメールアドレス",
+            "password": "パスワード",
+            "button": "ログイン",
+            "remember-me": "ログイン情報を保存",
+            "lost-password": "パスワードを忘れましたか?"
+        },
+        "have-a-coupon": "クーポンはお持ちですか？",
+        "click-here-to-enter": "クーポンコードの入力はこちら",
+        "coupon-code": "クーポンコード",
+        "coupon": "クーポンを使う",
+        "details": {
+            "title": "ご請求内容",
+            "country": {
+                "title": "国",
+                "albania": "アルバニア",
+                "america": "アメリカ",
+                "bahrain": "バーレーン",
+                "colombia": "コロンビア",
+                "dominican": "ドミニカ共和国",
+                "france": "フランス",
+                "germany": "ドイツ",
+                "japan": "日本"
+            },
+            "first-name": "名",
+            "last-name": "姓",
+            "company-name": "会社名",
+            "address": "住所",
+            "street-address": "住所",
+            "street-address-details": "アパート、マンションなど（任意）",
+            "town": "市町村",
+            "state": "都道府県",
+            "zip": "郵便番号",
+            "email": "メールアドレス",
+            "phone": "電話番号",
+            "create-account": "アカウントを作成しますか？",
+            "subtitle": "異なる住所に発送しますか?",
+            "order-notes": "ご注文に関する注意事項",
+            "order-notes-desc": "ご注文に関する注意事項（配送に関する特記事項など）。",
+            "order": {
+                "title": "ご注文内容",
+                "product": "商品",
+                "total": "合計金額",
+                "subtotal": "小計",
+                "shipping": "送料",
+                "flat-rate": "定額料金",
+                "free-shipping": "送料無料",
+                "order-total": "注文合計金額",
+                "direct": "銀行振込",
+                "description": "当社の銀行口座に直接お支払いください。お支払い時の参照番号として、ご注文IDをご利用ください。弊社口座に資金が入金されるまで、ご注文は発送されません。",
+                "cheque-payment": "小切手支払い",
+                "description2": "小切手は、店舗名、店舗通り、店舗町、店舗都道府県、店舗郵便番号までお送りください。",
+                "place-order": "注文"
+            }
+        }
+    },
+    "wishlist": {
+        "no-wish": "ウィッシュリストはありません",
+        "shop-now": "今すぐ購入",
+        "images": "画像",
+        "product": "商品",
+        "unit-price": "単価",
+        "quantity": "数量",
+        "total": "合計",
+        "remove": "削除",
+        "add-to-cart": "カートに入れる"
+    },
+    "added-to-cart": "がカートに追加されました!",
+    "remove-from-cart": "がカートから取り除かれました"
 }

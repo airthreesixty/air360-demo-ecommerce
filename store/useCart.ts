@@ -1,5 +1,5 @@
-import { defineStore } from 'pinia';
-import ProductType from '~~/types/productType';
+import { defineStore } from 'pinia'
+import ProductType from '~~/types/productType'
 
 export const useCartStore = defineStore('cart', {
   state: () => ({
@@ -10,15 +10,15 @@ export const useCartStore = defineStore('cart', {
   }),
   actions: {
     // add_cart_product
-    add_cart_product(payload: ProductType) {
-      const isExist = this.cart_products.some((i) => i.id === payload.id);
+    add_cart_product (payload: ProductType, itemName: string, message: string) {
+      const isExist = this.cart_products.some(i => i.id === payload.id)
       if (!isExist) {
         const newItem = {
           ...payload,
           orderQuantity: 1,
-        };
-        this.cart_products.push(newItem);
-        useNuxtApp().$toast.success(`${payload.title} added to cart`);
+        }
+        this.cart_products.push(newItem)
+        useNuxtApp().$toast.success(`${itemName} ${message}`)
       } else {
         this.cart_products.map((item) => {
           if (item.id === payload.id) {
@@ -27,78 +27,78 @@ export const useCartStore = defineStore('cart', {
                 item.orderQuantity =
                   this.orderQuantity !== 1
                     ? this.orderQuantity + item.orderQuantity
-                    : item.orderQuantity + 1;
-                useNuxtApp().$toast.success(`${this.orderQuantity} ${item.title} added to cart`);
+                    : item.orderQuantity + 1
+                useNuxtApp().$toast.success(`${this.orderQuantity} × ${itemName} ${message}`)
               } else {
-                useNuxtApp().$toast.error(`No more quantity available for this product!`);
-                this.orderQuantity = 1;
+                useNuxtApp().$toast.error('No more quantity available for this product!')
+                this.orderQuantity = 1
               }
             }
           }
-          return { ...item };
-        });
+          return { ...item }
+        })
       }
-      localStorage.setItem('cart_products', JSON.stringify(this.cart_products));
+      localStorage.setItem('cart_products', JSON.stringify(this.cart_products))
     },
     // quantityDecrement
-    quantityDecrement(payload: ProductType) {
+    quantityDecrement (payload: ProductType) {
       this.cart_products.map((item) => {
         if (item.id === payload.id) {
-          if(typeof item.orderQuantity !== 'undefined'){
+          if (typeof item.orderQuantity !== 'undefined') {
             if (item.orderQuantity > 1) {
-              item.orderQuantity = item.orderQuantity - 1;
+              item.orderQuantity = item.orderQuantity - 1
             }
           }
         }
-        return { ...item };
-      });
-      localStorage.setItem('cart_products', JSON.stringify(this.cart_products));
+        return { ...item }
+      })
+      localStorage.setItem('cart_products', JSON.stringify(this.cart_products))
     },
     // remover_cart_products
-    remover_cart_products (payload: ProductType){
+    _cart_products (payload: ProductType, itemName:string, message:string) {
       this.cart_products = this.cart_products.filter(p => p.id !== payload.id)
-      useNuxtApp().$toast.error(`${payload.title} remove to cart`);
-      localStorage.setItem('cart_products', JSON.stringify(this.cart_products));
+      useNuxtApp().$toast.error(`${itemName} ${message}`)
+      localStorage.setItem('cart_products', JSON.stringify(this.cart_products))
     },
     clear_cart () {
-      const confirmMsg = window.confirm('Are you sure deleted your all cart items ?');
-      if(confirmMsg){
-        this.cart_products = [];
+      const confirmMsg = window.confirm('Are you sure deleted your all cart items ?')
+      if (confirmMsg) {
+        this.cart_products = []
       }
-      localStorage.setItem('cart_products', JSON.stringify(this.cart_products));
+      localStorage.setItem('cart_products', JSON.stringify(this.cart_products))
     },
-    initialOrderQuantity(){
+    initialOrderQuantity () {
       this.orderQuantity = 1
-    }
+    },
   },
   getters: {
     totalPriceQuantity: (state) => {
       return state.cart_products.reduce((cartTotal, cartItem) => {
-        const { price, orderQuantity } = cartItem;
-        if(typeof orderQuantity !== 'undefined'){
-          const itemTotal = price * orderQuantity;
-          cartTotal.quantity += orderQuantity;
-          cartTotal.total += itemTotal;
+        const { price, orderQuantity } = cartItem
+        if (typeof orderQuantity !== 'undefined') {
+          const itemTotal = price * orderQuantity
+          cartTotal.quantity += orderQuantity
+          cartTotal.total += itemTotal
         }
-        return cartTotal;
+        return cartTotal
       }, {
         total: 0,
         quantity: 0,
       })
     },
-    get_cart_products:(state) => {
+    get_cart_products: (state) => {
       if (process.client) {
-        const data = localStorage.getItem('cart_products');
+        const data = localStorage.getItem('cart_products')
         if (data) {
-          return state.cart_products = JSON.parse(data);
+          return state.cart_products = JSON.parse(data)
         } else {
-          localStorage.setItem('cart_products', JSON.stringify([]));
-          return state.cart_products = [];
+          localStorage.setItem('cart_products', JSON.stringify([]))
+          return state.cart_products = []
         }
       } else {
-        return state.cart_products;
+        return state.cart_products
       }
-    }
-  }
+    },
+  },
 
 })

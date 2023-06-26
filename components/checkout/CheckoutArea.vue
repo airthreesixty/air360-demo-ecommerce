@@ -5,7 +5,7 @@
         <div class="row">
           <div class="col-lg-6">
             <div class="checkbox-form">
-              <h3>Billing Details</h3>
+              <h3>{{ $t('checkout.details.title') }}</h3>
               <!-- billing details start -->
               <billing-details />
               <!-- billing details end -->
@@ -27,16 +27,16 @@
 </template>
 
 <script>
-import BillingDetails from "./BillingDetails.vue";
-import DifferentAddress from "./DifferentAddress.vue";
-import OrderArea from "./OrderArea.vue";
+import BillingDetails from './BillingDetails.vue'
+import DifferentAddress from './DifferentAddress.vue'
+import OrderArea from './OrderArea.vue'
 
 export default {
   components: { OrderArea, BillingDetails, DifferentAddress },
   methods: {
-    handleFormSubmit() {
-      console.log("submit form");
+    handleFormSubmit () {
+      console.log('submit form')
     },
   },
-};
+}
 </script>

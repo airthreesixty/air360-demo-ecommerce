@@ -120,8 +120,12 @@
             "subtitle": "Register" 
         },
         "login": {
-            "title": "ログイン",
-            "subtitle": "ログイン"
+            "title": "Login",
+            "subtitle": "Login"
+        },
+        "details": {
+            "title": "Product Details",
+            "subtitle": "Product Details"
         }
     },
     "categories": {
@@ -261,5 +265,111 @@
         "choose-color": "Choose Color",
         "brand": "Brand",
         "reset-filter": "RESET FILTER"
-    }
+    },
+    "details": {
+        "size": "Size",
+        "please-select": "Please select",
+        "color": "Color",
+        "required": "Required Fields",
+        "quantity": "Quantity",
+        "add-to-cart": "ADD TO CART",
+        "description": "Description",
+        "additional-information": "Additional information",
+        "weight": "Weight",
+        "dimention": "Dimention",   
+        "reviews": "Reviews",
+        "related-products": {
+            "title": "Related Products",
+            "description": "Discover our range of complementary products that enhance your experience and perfectly complement your existing setup."
+        }
+    },
+    "cart": {
+        "no-cart": "No Cart product",
+        "shop-now": "SHOP NOW",
+        "image": "Images",
+        "product": "Product",
+        "unit-price": "Unit Price",
+        "quantity": "Quantity",
+        "total": "Total",
+        "remove": "Remove",
+        "coupon": "Apply coupon",
+        "coupon-code": "Coupon Code",
+        "clear-cart": "Clear cart",
+        "cart-totals": "Cart totals",
+        "subtotal": "Subtotal",
+        "checkout": "Proceed to checkout"
+    },
+    "checkout": {
+        "returning": "Returning customer?",
+        "click-here-to-login": "Click here to login",
+        "login": {
+            "description": "Please enter your login information.",
+            "user-info": "Username or email",
+            "password": "Password",
+            "button": "Login",
+            "remember-me": "Remember Me",
+            "lost-password": "Lost your password?"
+        },
+        "have-a-coupon": "Have a coupon?",
+        "click-here-to-enter": "Click here to enter your code",
+        "coupon-code": "Coupon Code",
+        "coupon": "APPLY COUPON",
+        "details": {
+            "title": "Billing Details",
+            "country": {
+                "title": "Country",
+                "albania": "Albania",
+                "america": "America",
+                "bahrain": "Bahrain",
+                "colombia": "Colombia",
+                "dominican": "Dominican Republic",
+                "france": "France",
+                "germany": "Germany",
+                "japan": "Japan"
+            },
+            "first-name": "First Name",
+            "last-name": "Last Name",
+            "company-name": "Company Name",
+            "address": "Address",
+            "street-address": "Street address",
+            "street-address-details": "Apartment, suit, unit, etc(optional)",
+            "town": "Town/City",
+            "state": "State/County",
+            "zip": "Postcode/Zip",
+            "email": "Email Address",
+            "phone": "Phone number",
+            "create-account": "Create an account?",
+            "subtitle": "Ship to a different address?",
+            "order-notes": "Order Notes",
+            "order-notes-desc": "Notes about your order, e.g. special notes for delivery.",
+            "order": {
+                "title": "Your order",
+                "product": "Product",
+                "total": "Total",
+                "subtotal": "subtotal",
+                "shipping": "Shipping",
+                "flat-rate": "Flat Rate",
+                "free-shipping": "Free Shipping",
+                "order-total": "Order Total",
+                "direct": "DIRECT BANK TRANSFER",
+                "description": "Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won’t be shipped until the funds have cleared in our account.",
+                "cheque-payment": "CHEQUE PAYMENT",
+                "description2": "Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.",
+                "place-order": "PLACE ORDER"
+            }
+        }
+    },
+    "wishlist": {
+        "no-wish": "No wishlist product",
+        "shop-now": "SHOP NOW",
+        "images": "Images",
+        "product": "Product",
+        "unit-price": "Unit Price",
+        "quantity": "Quantity",
+        "total": "Total",
+        "remove": "Remove",
+        "add-to-cart": "ADD TO CART"
+    },
+    "added-to-cart": "added to cart!",
+    "remove-from-cart": "removed from cart"
 }

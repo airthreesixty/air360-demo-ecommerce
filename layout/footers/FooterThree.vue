@@ -29,7 +29,7 @@
           <div class="col-xl-4 col-lg-6 col-md-6 col-12">
             <div class="footer__widget mb-30">
               <div class="footer__widget-title mb-25">
-                <nuxt-link href="/">
+                <nuxt-link :to="localePath('/')">
                   <img src="~/assets/img/logo/log-3.webp" alt="logo">
                 </nuxt-link>
               </div>
@@ -127,7 +127,7 @@
           <div class="col-xl-6 col-lg-7 col-md-8">
             <div class="footer__copyright footer__copyright-3">
               <p>
-                Copyright © {{ new Date().getFullYear() }} <nuxt-link href="/" class="link">
+                Copyright © {{ new Date().getFullYear() }} <nuxt-link :to="localePath('/')" class="link">
                   Outstock
                 </nuxt-link> all rights reserved.
                 <!-- <nuxt-link href="/" class="link">
@@ -152,7 +152,10 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   setup () {
-    return {}
+    const localePath = useLocalePath()
+    return {
+      localePath,
+    }
   },
 })
 </script>

@@ -5,12 +5,11 @@
         <div class="col-xl-12">
           <div class="section__title-wrapper text-center mb-55">
             <div class="section__title mb-10">
-              <h2>Related Products</h2>
+              <h2>{{ $t('details.related-products.title') }}</h2>
             </div>
             <div class="section__sub-title">
               <p>
-                Mirum est notare quam littera gothica quam nunc putamus parum
-                claram!
+                {{ $t('details.related-products.description') }}
               </p>
             </div>
           </div>
@@ -30,10 +29,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
-import ProductType from "~~/types/productType";
-import { useProductsStore } from "~~/store/useProducts";
-import ProductItem from "../products/ProductItem.vue";
+import { defineComponent, PropType } from 'vue'
+import ProductItem from '../products/ProductItem.vue'
+import ProductType from '~~/types/productType'
+import { useProductsStore } from '~~/store/useProducts'
 
 export default defineComponent({
   components: { ProductItem },
@@ -44,9 +43,9 @@ export default defineComponent({
       required: true,
     },
   },
-  setup(props) {
-    const state = useProductsStore();
-    return {state};
+  setup (props) {
+    const state = useProductsStore()
+    return { state }
   },
-});
+})
 </script>

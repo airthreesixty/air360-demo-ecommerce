@@ -25,7 +25,7 @@
             </div>
             <div class="col-lg-12">
               <div class="product__big-image effectThree mb-40">
-                <nuxt-link :href="`/product-details/${big_prd_1.id}`">
+                <nuxt-link :to="localePath(`/product-details/${big_prd_1.id}`)">
                   <img :src="big_prd_1.big_img" alt="">
                 </nuxt-link>
               </div>
@@ -36,7 +36,7 @@
           <div class="row">
             <div class="col-lg-12">
               <div class="product__big-image effectThree mb-40">
-                <nuxt-link :href="`/product-details/${big_prd_2.id}`">
+                <nuxt-link :to="localePath(`/product-details/${big_prd_2.id}`)">
                   <img :src="big_prd_2.big_img" alt="product img">
                 </nuxt-link>
               </div>
@@ -70,10 +70,12 @@ export default defineComponent({
     const big_prd_1 = best_sale_prd.filter(p => p.big_img)[0]
     const big_prd_2 = best_sale_prd.filter(p => p.big_img)[1]
     const sm_best_prd = best_sale_prd.filter(p => !p.big_img)
+    const localePath = useLocalePath()
     return {
       big_prd_1,
       big_prd_2,
       sm_best_prd,
+      localePath,
     }
   },
 })

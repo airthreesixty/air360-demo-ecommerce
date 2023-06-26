@@ -5,9 +5,9 @@
         <div class="row">
           <div class="col-12">
             <div v-if="state.cart_products.length === 0" class="text-center">
-              <h3>No Cart product</h3>
-              <nuxt-link class="os-btn os-btn-black mt-20" to="/shop">
-                Shop Now
+              <h3>{{ $t('cart.no-cart') }}</h3>
+              <nuxt-link class="os-btn os-btn-black mt-20" :to="localePath('/shop')">
+                {{ $t('cart.shop-now') }}
               </nuxt-link>
             </div>
             <form v-if="state.cart_products.length > 0" action="#">
@@ -16,22 +16,22 @@
                   <thead>
                     <tr>
                       <th class="product-thumbnail">
-                        Images
+                        {{ $t('cart.image') }}
                       </th>
                       <th class="cart-product-name">
-                        Product
+                        {{ $t('cart.product') }}
                       </th>
                       <th class="product-price">
-                        Unit Price
+                        {{ $t('cart.unit-price') }}
                       </th>
                       <th class="product-quantity">
-                        Quantity
+                        {{ $t('cart.quantity') }}
                       </th>
                       <th class="product-subtotal">
-                        Total
+                        {{ $t('cart.total') }}
                       </th>
                       <th class="product-remove">
-                        Remove
+                        {{ $t('cart.remove') }}
                       </th>
                     </tr>
                   </thead>
@@ -50,16 +50,16 @@
                         class="input-text"
                         name="coupon_code"
                         value=""
-                        placeholder="Coupon code"
+                        :placeholder="$t('cart.coupon-code')"
                         type="text"
                       >
                       <button class="os-btn os-btn-black" name="apply_coupon" type="button">
-                        Apply coupon
+                        {{ $t('cart.coupon') }}
                       </button>
                     </div>
                     <div class="coupon2">
                       <button class="os-btn os-btn-black" name="update_cart" type="button" @click="state.clear_cart">
-                        Clear cart
+                        {{ $t('cart.clear-cart') }}
                       </button>
                     </div>
                   </div>
@@ -68,13 +68,13 @@
               <div class="row">
                 <div class="col-md-5 ms-auto">
                   <div class="cart-page-total">
-                    <h2>Cart totals</h2>
+                    <h2>{{ $t('cart.total') }}</h2>
                     <ul class="mb-20">
-                      <li>Subtotal <span>${{ state.totalPriceQuantity.total }}</span></li>
-                      <li>Total <span>${{ state.totalPriceQuantity.total }}</span></li>
+                      <li>{{ $t('cart.subtotal') }}<span>${{ state.totalPriceQuantity.total }}</span></li>
+                      <li>{{ $t('cart.total') }} <span>${{ state.totalPriceQuantity.total }}</span></li>
                     </ul>
-                    <nuxt-link class="os-btn" href="/checkout">
-                      Proceed to checkout
+                    <nuxt-link class="os-btn" :to="localePath('/checkout')">
+                      {{ $t('cart.checkout') }}
                     </nuxt-link>
                   </div>
                 </div>
@@ -96,7 +96,8 @@ export default defineComponent({
   components: { CartItem },
   setup () {
     const state = useCartStore()
-    return { state }
+    const localePath = useLocalePath()
+    return { state, localePath }
   },
 })
 </script>

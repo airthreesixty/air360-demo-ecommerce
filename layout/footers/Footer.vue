@@ -6,7 +6,7 @@
           <div class="col-xl-6 col-lg-6 col-md-6 col-12">
             <div class="footer__widget mb-30">
               <div class="footer__widget-title mb-25">
-                <nuxt-link href="/">
+                <nuxt-link :to="localePath('/')">
                   <img src="~/assets/img/logo/logo-2.png" alt="logo">
                 </nuxt-link>
               </div>
@@ -94,7 +94,7 @@
             <div class="footer__copyright">
               <p>
                 Copyright {{ new Date().getFullYear() }} ©
-                <nuxt-link href="/">
+                <nuxt-link :to="localePath('/')">
                   Outstock
                 </nuxt-link> all rights reserved.
               </p>
@@ -127,6 +127,10 @@ export default defineComponent({
       type: Boolean,
       default: false,
     },
+  },
+  setup () {
+    const localePath = useLocalePath()
+    return { localePath }
   },
 })
 </script>

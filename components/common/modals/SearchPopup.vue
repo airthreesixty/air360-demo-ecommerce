@@ -16,32 +16,32 @@
               <div class="header__search-categories">
                 <ul class="search-category">
                   <li>
-                    <nuxt-link href="/shop">
+                    <nuxt-link :to="localePath('/shop')">
                       {{ $t('nav.search.all') }}
                     </nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link href="/shop">
+                    <nuxt-link :to="localePath('/shop')">
                       {{ $t('nav.search.accessories') }}
                     </nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link href="/shop">
+                    <nuxt-link :to="localePath('/shop')">
                       {{ $t('nav.search.chair') }}
                     </nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link href="/shop">
+                    <nuxt-link :to="localePath('/shop')">
                       {{ $t('nav.search.tablet') }}
                     </nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link href="/shop">
+                    <nuxt-link :to="localePath('/shop')">
                       {{ $t('nav.search.men') }}
                     </nuxt-link>
                   </li>
                   <li>
-                    <nuxt-link href="/shop">
+                    <nuxt-link :to="localePath('/shop')">
                       {{ $t('nav.search.women') }}
                     </nuxt-link>
                   </li>
@@ -52,7 +52,6 @@
                 <button type="submit">
                   <i class="far fa-search" />
                 </button>
-                <p>{{ searchText }}</p>
               </div>
             </form>
           </div>
@@ -70,26 +69,28 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import productData from '../../../data/productData'
+// import productData from '../../../data/productData'
+import productData from '~/mixins/productData'
 
 export default defineComponent({
-//  emits:['searchPopup'],
+  mixins: [productData],
+  //  emits:['searchPopup'],
   setup () {
-    const { t } = useI18n()
     const searchText = ref('')
     // store titles
     // filter titles by the search keyword
-
-    const titles = productData.map(item => t(`${item.title}.title`))
-    console.log(titles)
+    const titles = productData.data().productData.map(item => item.title)
 
     const filteredItems = () => {
       return titles.filter(title => title.includes(searchText.value))
     }
 
+    const localePath = useLocalePath()
+
     return {
       searchText,
       filteredItems,
+      localePath,
     }
   },
   data () {

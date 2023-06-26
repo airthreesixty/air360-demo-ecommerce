@@ -2,75 +2,75 @@
   <div class="different-address">
     <div class="ship-different-title">
       <h3>
-        <label for="ship-box">Ship to a different address?</label>
-        <input @click="handleShipBox" id="ship-box" type="checkbox" />
+        <label for="ship-box">{{ $t('checkout.details.subtitle') }}</label>
+        <input id="ship-box" type="checkbox" @click="handleShipBox">
       </h3>
     </div>
     <div v-if="shipBox" id="ship-box-info">
       <div class="row">
         <div class="col-md-12">
-            <country-select />
+          <country-select />
         </div>
         <div class="col-md-6">
           <div class="checkout-form-list">
-            <label>First Name <span class="required">*</span></label>
-            <input type="text" placeholder="First Name" />
+            <label>{{ $t('checkout.details.first-name') }} <span class="required">*</span></label>
+            <input type="text" :placeholder="$t('checkout.details.first-name')">
           </div>
         </div>
         <div class="col-md-6">
           <div class="checkout-form-list">
-            <label>Last Name <span class="required">*</span></label>
-            <input type="text" placeholder="Last Name" />
+            <label>{{ $t('checkout.details.last-name') }} <span class="required">*</span></label>
+            <input type="text" :placeholder="$t('checkout.details.last-name')">
           </div>
         </div>
         <div class="col-md-12">
           <div class="checkout-form-list">
-            <label>Company Name</label>
-            <input type="text" placeholder="example LTD." />
+            <label>{{ $t('checkout.details.company-name') }}</label>
+            <input type="text" :placeholder="$t('checkout.details.company-name')">
           </div>
         </div>
         <div class="col-md-12">
           <div class="checkout-form-list">
-            <label>Address <span class="required">*</span></label>
-            <input type="text" placeholder="Street address" />
+            <label>{{ $t('checkout.details.address') }} <span class="required">*</span></label>
+            <input type="text" :placeholder="$t('checkout.details.street-address')">
           </div>
         </div>
         <div class="col-md-12">
           <div class="checkout-form-list">
             <input
               type="text"
-              placeholder="Apartment, suite, unit etc. (optional)"
-            />
+              :placeholder="$t('checkout.details.street-address-details')"
+            >
           </div>
         </div>
         <div class="col-md-12">
           <div class="checkout-form-list">
-            <label>Town / City <span class="required">*</span></label>
-            <input type="text" placeholder="Town / City" />
+            <label>{{ $t('checkout.details.town') }} <span class="required">*</span></label>
+            <input type="text" :placeholder="$t('checkout.details.town')">
           </div>
         </div>
         <div class="col-md-6">
           <div class="checkout-form-list">
-            <label>State / County <span class="required">*</span></label>
-            <input type="text" placeholder="State / County" />
+            <label>{{ $t('checkout.details.state') }} <span class="required">*</span></label>
+            <input type="text" placeholder="State / County">
           </div>
         </div>
         <div class="col-md-6">
           <div class="checkout-form-list">
-            <label>Postcode / Zip <span class="required">*</span></label>
-            <input type="text" placeholder="Postcode / Zip" />
+            <label>{{ $t('checkout.details.zip') }} <span class="required">*</span></label>
+            <input type="text" :placeholder="$t('checkout.details.zip')">
           </div>
         </div>
         <div class="col-md-6">
           <div class="checkout-form-list">
-            <label>Email Address <span class="required">*</span></label>
-            <input type="email" placeholder="Your Email" />
+            <label>{{ $t('checkout.details.email') }} <span class="required">*</span></label>
+            <input type="email" :placeholder="$t('checkout.details.email')">
           </div>
         </div>
         <div class="col-md-6">
           <div class="checkout-form-list">
-            <label>Phone <span class="required">*</span></label>
-            <input type="text" placeholder="Phone number" />
+            <label>{{ $t('checkout.details.phone') }} <span class="required">*</span></label>
+            <input type="text" :placeholder="$t('checkout.details.phone')">
           </div>
         </div>
       </div>
@@ -78,13 +78,13 @@
     <!-- <ClientOnly> -->
     <div class="order-notes">
       <div class="checkout-form-list">
-        <label>Order Notes</label>
+        <label>{{ $t('checkout.details.order-notes') }}</label>
 
         <textarea
           id="checkout-mess"
           cols="30"
           rows="10"
-          placeholder="Notes about your order, e.g. special notes for delivery."
+          :placeholder="$t('checkout.details.order-notes-desc')"
         />
       </div>
     </div>
@@ -93,19 +93,19 @@
 </template>
 
 <script>
-import CountrySelect from "./CountrySelect.vue";
+import CountrySelect from './CountrySelect.vue'
 
 export default {
   components: { CountrySelect },
-  data() {
+  data () {
     return {
       shipBox: false,
-    };
+    }
   },
   methods: {
-    handleShipBox() {
-      this.shipBox = !this.shipBox;
+    handleShipBox () {
+      this.shipBox = !this.shipBox
     },
   },
-};
+}
 </script>

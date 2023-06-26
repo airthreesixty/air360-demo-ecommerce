@@ -2,12 +2,13 @@
   <tr>
     <td class="product-thumbnail">
       <nuxt-link :href="`/product-details/${item.id}`">
-        <img :src="item.img" alt="" />
+        <img :src="item.img" alt="">
       </nuxt-link>
     </td>
     <td class="product-name">
       <nuxt-link :href="`/product-details/${item.id}`">
-        <span v-html="item.title"></span>
+        <!-- <span v-html="item.title" /> -->
+        <span>{{ $t(`${item.title}.title`) }}</span>
       </nuxt-link>
     </td>
     <td class="product-price">
@@ -15,33 +16,33 @@
     </td>
     <td class="product-quantity">
       <div class="cart-plus-minus">
-        <input type="text" v-model="item.orderQuantity" />
-        <div @click="state.quantityDecrement(item)" class="dec qtybutton">
+        <input v-model="item.orderQuantity" type="text">
+        <div class="dec qtybutton" @click="state.quantityDecrement(item)">
           -
         </div>
-        <div @click="state.add_cart_product(item)" class="inc qtybutton">+</div>
+        <div class="inc qtybutton" @click="state.add_cart_product(item, $t(`${item.title}.title`), $t('added-to-cart'))">
+          +
+        </div>
       </div>
     </td>
     <td class="product-subtotal">
-      <span class="amount"
-        >${{
-          typeof item.orderQuantity !== "undefined" &&
+      <span class="amount">${{
+        typeof item.orderQuantity !== "undefined" &&
           item.price * item.orderQuantity
-        }}</span
-      >
+      }}</span>
     </td>
-    <td class="product-remove" @click.prevent="state.remover_cart_products(item)">
+    <td class="product-remove" @click.prevent="state.remover_cart_products(item, $t(`${item.title}.title`), $t('remove-from-cart'))">
       <a href="#">
-        <i class="fa fa-times"></i>
+        <i class="fa fa-times" />
       </a>
     </td>
   </tr>
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
-import ProductType from "~~/types/productType";
-import { useCartStore } from "~~/store/useCart";
+import { defineComponent, PropType } from 'vue'
+import ProductType from '~~/types/productType'
+import { useCartStore } from '~~/store/useCart'
 
 export default defineComponent({
   props: {
@@ -51,9 +52,9 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
-    const state = useCartStore();
-    return { state };
+  setup () {
+    const state = useCartStore()
+    return { state }
   },
-});
+})
 </script>

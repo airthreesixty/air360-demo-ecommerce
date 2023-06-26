@@ -26,14 +26,14 @@
               >
                 <div class="blog-thumb m-img">
                   <img :src="item.img" alt="blog-img">
-                  <nuxt-link :href="`/blog-details/${item.id}`" class="btn">
+                  <nuxt-link :to="localePath(`/blog-details/${item.id}`)" class="btn">
                     <i class="fa fa-link" />
                   </nuxt-link>
                 </div>
                 <div class="blog__post-content">
                   <div class="blog__wrapper">
                     <h5 class="blog__post-title">
-                      <nuxt-link :href="`/blog-details/${item.id}`">
+                      <nuxt-link :to="localePath(`/blog-details/${item.id}`)">
                         <span v-html="item.title" />
                       </nuxt-link>
                     </h5>
@@ -79,7 +79,12 @@ interface sliderRef {
 export default defineComponent({
   components: { Carousel, Slide },
   mixins: [blogData],
-  setup () {},
+  setup () {
+    const localePath = useLocalePath()
+    return {
+      localePath,
+    }
+  },
   methods: {
     handleNext () {
       const sliderRef = this.$refs.slider_1 as sliderRef
