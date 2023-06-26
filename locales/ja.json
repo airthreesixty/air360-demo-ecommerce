@@ -390,5 +390,18 @@
         "add-to-cart": "カートに入れる"
     },
     "added-to-cart": "がカートに追加されました!",
-    "remove-from-cart": "がカートから取り除かれました"
+    "remove-from-cart": "がカートから取り除かれました",
+    "reviews": {
+        "title": "レビュー",
+        "review": "素晴らしい製品！期待以上の品質で、発送もとても早かったです。このセラーを強くお勧めします！",
+        "date": "3ヶ月前",
+        "leave-reply": "返信",
+        "your-review": "あなたのレビュー",
+        "your-rating": "あなたの評価",
+        "name": "名前",
+        "email": "メールアドレス",
+        "subject": "件名",
+        "comments": "コメント",
+        "post-comment": "コメントを送信"
+    }
 }

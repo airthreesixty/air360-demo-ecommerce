@@ -390,5 +390,18 @@
         "add-to-cart": "ADD TO CART"
     },
     "added-to-cart": "added to cart!",
-    "remove-from-cart": "removed from cart"
+    "remove-from-cart": "removed from cart",
+    "reviews": {
+        "title": "Reviews",
+        "review": "Amazing product! The quality exceeded my expectations, and the shipping was super fast. Highly recommend this seller!",
+        "date": "3 Months Ago",
+        "leave-reply": "Leave Reply",
+        "your-review": "Your Review",
+        "your-rating": "Your rating",
+        "name": "Name",
+        "email": "Email",
+        "subject": "Subject",
+        "comments": "Comments",
+        "post-comment": "POST COMMENT"
+    }
 }
