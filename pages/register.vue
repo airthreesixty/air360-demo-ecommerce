@@ -18,8 +18,9 @@ export default defineComponent({
     RegisterArea,
   },
   setup () {
+    const { t } = useI18n()
     useHead({
-      title: 'Register',
+      title: t('page-title.register'),
     })
   },
 })

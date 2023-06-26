@@ -18,8 +18,9 @@ export default defineComponent({
     LoginArea,
   },
   setup () {
+    const { t } = useI18n()
     useHead({
-      title: 'Login',
+      title: t('page-title.login'),
     })
   },
 })

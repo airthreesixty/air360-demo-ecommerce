@@ -74,8 +74,9 @@ export default defineComponent({
     ClientBrandSliderTwo,
   },
   setup () {
+    const { t } = useI18n()
     useHead({
-      title: 'Home Seven',
+      title: t('page-title.lp'),
     })
   },
 })

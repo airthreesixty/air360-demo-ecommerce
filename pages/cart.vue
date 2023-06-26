@@ -18,8 +18,9 @@ export default defineComponent({
     CartArea,
   },
   setup () {
+    const { t } = useI18n()
     useHead({
-      title: 'Cart',
+      title: t('page-title.cart'),
     })
   },
 })

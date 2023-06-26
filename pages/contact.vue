@@ -18,8 +18,9 @@ export default defineComponent({
     ContactArea,
   },
   setup () {
+    const { t } = useI18n()
     useHead({
-      title: 'Contact',
+      title: t('page-title.contact'),
     })
   },
 })

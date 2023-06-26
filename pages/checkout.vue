@@ -33,8 +33,9 @@ export default defineComponent({
   },
   setup () {
     const state = useCartStore()
+    const { t } = useI18n()
     useHead({
-      title: 'Checkout',
+      title: t('page-title.checkout'),
     })
     return { state }
   },

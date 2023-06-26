@@ -403,5 +403,16 @@
         "subject": "件名",
         "comments": "コメント",
         "post-comment": "コメントを送信"
+    },
+    "page-title": {
+        "lp": "デモサイト",
+        "shop": "ショップ",
+        "blog": "ブログ",
+        "contact": "コンタクト",
+        "cart": "カート",
+        "wish-list": "ウィッシュリスト",
+        "checkout": "チェックアウト",
+        "register": "アカウント作成",
+        "login": "ログイン"
     }
 }

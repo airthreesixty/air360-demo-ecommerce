@@ -18,8 +18,9 @@ export default defineComponent({
     BlogStandardArea,
   },
   setup () {
+    const { t } = useI18n()
     useHead({
-      title: 'Blog',
+      title: t('page-title.blog'),
     })
   },
 })

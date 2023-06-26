@@ -18,8 +18,9 @@ export default defineComponent({
     ShopArea,
   },
   setup () {
+    const { t } = useI18n()
     useHead({
-      title: 'Shop',
+      title: t('page-title.shop'),
     })
   },
 })

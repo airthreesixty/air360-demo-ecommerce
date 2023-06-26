@@ -18,8 +18,9 @@ export default defineComponent({
     WishlistArea,
   },
   setup () {
+    const { t } = useI18n()
     useHead({
-      title: 'Wishlist',
+      title: t('page-title.wishlist'),
     })
   },
 })

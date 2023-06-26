@@ -5,7 +5,7 @@
         <img :src="item.img" alt="">
       </div>
       <div class="banner__content-5">
-        <h5>{{ item.parentTitle }}</h5>
+        <h5>{{ $t(`${item.parentTitle}`) }}</h5>
         <p>{{ item.smDesc }}</p>
         <nuxt-link :to="localePath('/shop')" class="os-btn-5">
           {{ $t('shop-now') }}

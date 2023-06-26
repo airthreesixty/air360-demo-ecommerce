@@ -403,5 +403,16 @@
         "subject": "Subject",
         "comments": "Comments",
         "post-comment": "POST COMMENT"
+    },
+    "page-title": {
+        "lp": "Demo site",
+        "shop": "Shop",
+        "blog": "Blog",
+        "contact": "Contact",
+        "cart": "Cart",
+        "wish-list": "Wishlist",
+        "checkout": "Checkout",
+        "register": "Register",
+        "login": "Login"
     }
 }
