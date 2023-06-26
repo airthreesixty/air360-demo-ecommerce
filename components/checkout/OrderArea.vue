@@ -16,7 +16,7 @@
         <tbody>
           <tr v-for="(item,i) in state.cart_products" :key="i" class="cart_item">
             <td class="product-name">
-              {{ item.title }} <strong class="product-quantity"> × {{ item.orderQuantity }}</strong>
+              {{ $t(`${item.title}.title`) }} <strong class="product-quantity"> × {{ item.orderQuantity }}</strong>
             </td>
             <td class="product-total">
               <span class="amount">${{ item.price }}</span>

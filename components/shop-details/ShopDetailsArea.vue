@@ -84,16 +84,16 @@
               <div id="pro-detailsContent" class="tab-content">
                 <div id="des" class="tab-pane fade show active" role="tabpanel">
                   <div class="product__details-des">
-                    <p>{{ item.details.details_text }}</p>
+                    <p>{{ $t(`${item.sm_desc}`) }}</p>
 
-                    <div class="product__details-des-list mb-20">
+                    <!-- <div class="product__details-des-list mb-20">
                       <ul>
                         <li v-for="(list,i) in item.details.details_list" :key="i">
                           <span>{{ list }}</span>
                         </li>
                       </ul>
-                    </div>
-                    <p>{{ item.details.details_text_2 }}</p>
+                    </div> -->
+                    <!-- <p>{{ item.details.details_text_2 }}</p> -->
                   </div>
                 </div>
                 <div id="add" class="tab-pane fade" role="tabpanel">

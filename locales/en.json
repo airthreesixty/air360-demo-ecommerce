@@ -146,61 +146,80 @@
     },
     "products": {
         "lamp": {
-            "title": "Lamp"
+            "title": "Lamp",
+            "sm_desc": "The lamp combines sleek design with powerful, energy-efficient lighting, creating a warm and inviting atmosphere in any space."
         },
         "lamp-for-home": {
-            "title": "Lamp For Home"
+            "title": "Lamp For Home",
+            "sm_desc": "The lamp illuminates your living spaces with a perfect balance of functionality and style, providing a cozy and inviting ambiance for your home."
         },
         "body-oil": {
-            "title": "Body Oil"
+            "title": "Body Oil",
+            "sm_desc": "Body oil is a luxurious blend of nourishing botanical extracts and essential oils, leaving your skin silky smooth, deeply moisturized, and radiantly glowing."
         },
         "fragrance": {
-            "title": "Fragrance"
+            "title": "Fragrance",
+            "sm_desc": "Fragrance captivates the senses with a harmonious blend of exquisite scents, creating an enchanting and uplifting ambiance that lingers throughout the day."
         },
         "survival-knife": {
-            "title": "Survival Knife"
+            "title": "Survival Knife",
+            "sm_desc": "Survival knife is a rugged and versatile survival knife, equipped with essential features for outdoor adventures, ensuring your preparedness and safety in challenging situations."
         },
         "scarf": {
-            "title": "Scarf"
+            "title": "Scarf",
+            "sm_desc":"Scarf embraces you in warmth and comfort, with its soft, luxurious fabric and stylish design, making it the perfect accessory for chilly days."
         },
         "wooden-spoon": {
-            "title": "Wooden Spoon"
+            "title": "Wooden Spoon",
+            "sm_desc": "Wooden spoon is a beautifully crafted wooden utensil, hand-carved from sustainable wood, providing a natural and eco-friendly option for your cooking needs."
         },
         "hand-bag": {
-            "title": "Hand Bag"
+            "title": "Hand Bag",
+            "sm_desc": "Handbag combines fashion and functionality, featuring a trendy design, ample storage space, and durable construction, making it a versatile accessory for your daily essentials."
         },
         "luxury-bag": {
-            "title": "Luxury Bag"
+            "title": "Luxury Bag",
+            "sm_desc": "Luxury bag exudes sophistication and refinement, with its premium materials, impeccable craftsmanship, and timeless design, making it an exquisite statement piece."
         },
         "shorts": {
-            "title": "Shorts"
+            "title": "Shorts",
+            "sm_desc": "FlexFit shorts offer a perfect blend of comfort and mobility, featuring stretchy and breathable fabric, making them ideal for active lifestyles and leisurely pursuits."
         },
         "antique-lamp": {
-            "title": "Antique lamp"
+            "title": "Antique lamp",
+            "sm_desc":  "Antique lamp is an exquisite antique piece, radiating a warm and nostalgic glow, adding a touch of vintage charm and elegance to any space."
         },
         "adrianna-papell": {
-            "title": "Adrianna Papell"
+            "title": "Adrianna Papell",
+            "sm_desc": "Adrianna Papell offers a collection of glamorous and elegant dresses, designed with exquisite details and craftsmanship, ensuring you shine on any special occasion."
         },
         "calvin-klein-women": {
-            "title": "Calvin Klein Green Dress"
+            "title": "Calvin Klein Green Dress",
+            "sm_desc": "Calvin Klein Women fragrance embodies the essence of modern femininity, with its captivating blend of floral and woody notes, leaving a lasting impression of confidence and grace."
         },
         "humidifier": {
-            "title":  "Humidifier"
+            "title":  "Humidifier",
+            "sm_desc":"Humidifier brings comfort to your living spaces, providing soothing moisture and relieving dryness, promoting better air quality and a healthier environment."
         },
         "heart-t-shirt": {
-            "title": "Heart-patterned T-shirts"
+            "title": "Heart-patterned T-shirts",
+            "sm_desc":  "Heart patterned T-Shirt is a stylish and casual t-shirt adorned with a heart design, expressing love and positivity, making it a perfect addition to your everyday wardrobe."
         },
         "knitted-hat": {
-            "title": "Knitted Hat"
+            "title": "Knitted Hat",
+            "sm_desc":"Knitted hat keeps you warm and fashionable during colder seasons, with its soft and cozy knit fabric and trendy design, adding a touch of charm to your outfit."
         },
         "cool-jacket": {
-            "title": "Cool Jacket"
+            "title": "Cool Jacket",
+            "sm_desc":  "Cool jacket combines style and functionality, featuring a sleek design, breathable materials, and innovative features, keeping you comfortable and fashionable in any weather."
         },
         "sophisticated-dress": {
-            "title": "Sophisticated Dress"
+            "title": "Sophisticated Dress",
+            "sm_desc": "Sophistique dress embodies elegance and sophistication, with its timeless design, impeccable tailoring, and luxurious fabrics, making it a standout choice for special occasions."
         },
         "high-heels": {
-            "title": "High Heels"
+            "title": "High Heels",
+            "sm_desc": "High-heels elevate your style with their stunning design, impeccable craftsmanship, and comfortable fit, adding a touch of glamour to any outfit."
         }
     },
     "contact": {

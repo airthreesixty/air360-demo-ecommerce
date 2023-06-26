@@ -22,7 +22,7 @@
       <span v-if="item.old_price" class="old-price">${{ item.old_price }}</span>
     </div>
     <div class="product__modal-des mb-30">
-      <p>{{ item.sm_desc }}</p>
+      <p>{{ $t(`${item.sm_desc}`) }}</p>
     </div>
     <div class="product__modal-form">
       <form action="#">
