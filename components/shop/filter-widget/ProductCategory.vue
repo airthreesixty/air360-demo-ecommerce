@@ -33,7 +33,7 @@
                   :aria-controls="`collapse-${i}`"
                   @click="state.handleParentCategory(item.parentTitle)"
                 >
-                  {{ item.parentTitle.toLowerCase() }}
+                  {{ $t(`${item.parentTitle}`) }}
                 </button>
               </h5>
             </div>
@@ -54,7 +54,7 @@
                         }`"
                         @click.prevent="state.handleCategory(list)"
                       >
-                        {{ list.toLowerCase() }}
+                        {{ $t(list) }}
                       </a>
                     </li>
                   </ul>

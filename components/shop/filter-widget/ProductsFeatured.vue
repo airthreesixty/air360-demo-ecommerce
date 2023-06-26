@@ -9,13 +9,13 @@
           <li v-for="(item,i) in featured_prd" :key="i" class="mb-20">
             <div class="featires__product-wrapper d-flex">
               <div class="features__product-thumb mr-15">
-                <nuxt-link :href="`/product-details/${item.id}`">
+                <nuxt-link :to="localePath(`/product-details/${item.id}`)">
                   <img :src="item.img" alt="pro-sm-1" style="width: 86px;height: 110px;">
                 </nuxt-link>
               </div>
               <div class="features__product-content">
                 <h5>
-                  <nuxt-link :href="`/product-details/${item.id}`">
+                  <nuxt-link :to="localePath(`/product-details/${item.id}`)">
                     <!-- <span v-html="item.title" /> -->
                     <span>{{ $t(`${item.title}.title`) }}</span>
                   </nuxt-link>
@@ -43,7 +43,8 @@ export default defineComponent({
   setup () {
     const store = useProductsStore()
     const featured_prd = store.products.filter(p => p.trending).slice(0, 2)
-    return { featured_prd }
+    const localePath = useLocalePath()
+    return { featured_prd, localePath }
   },
 })
 </script>
