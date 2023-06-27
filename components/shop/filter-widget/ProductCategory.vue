@@ -19,7 +19,7 @@
             :key="item.id"
             class="card"
           >
-            <div id="cloth" class="card-header white-bg">
+            <div :id="`cloth${item.id}`" class="card-header white-bg">
               <h5 class="mb-0">
                 <button
                   :class="`shop-accordion-btn collapsed text-capitalize ${
