@@ -66,21 +66,6 @@
         <input type="text" :placeholder="$t('checkout.details.phone')" required>
       </div>
     </div>
-    <div class="col-md-12">
-      <!-- <div class="checkout-form-list create-acc">
-        <input id="cbox" type="checkbox" @click="handleCreateAccount">
-        <label for="cbox">{{ $t('checkout.details.create-account') }}</label>
-      </div> -->
-      <!-- <div v-if="createAccount" id="cbox_info" class="checkout-form-list create-account">
-        <p>
-          Create an account by entering the information below. If you are a
-          returning customer please login at the top of the page.
-        </p>
-        <label>{{ $t('checkout.details.password') }}<span class="required">*</span></label>
-        <input type="password" placeholder="password">
-      </div>
-    </div> -->
-    </div>
   </div>
 </template>
 
