@@ -319,6 +319,8 @@
         "checkout": "Proceed to checkout"
     },
     "checkout": {
+        "empty": "No items found in cart to checkout",
+        "shop-now": "SHOP NOW",
         "returning": "Returning customer?",
         "click-here-to-login": "Click here to login",
         "login": {

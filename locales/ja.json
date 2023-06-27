@@ -319,6 +319,8 @@
         "checkout": "会計に進む"
     },
     "checkout": {
+        "empty": "カートに商品がありません",
+        "shop-now": "今すぐ購入",
         "returning": "前回ご利用いただいたお客様ですか？",
         "click-here-to-login": "ログインはこちらをクリック",
         "login": {

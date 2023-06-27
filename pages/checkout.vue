@@ -3,9 +3,9 @@
     <breadcrumb-area :title="$t('bread-crumb.checkout.title')" :subtitle="$t('bread-crumb.checkout.subtitle')" />
     <client-only>
       <div v-if="state.cart_products.length === 0" class="text-center pt-100 pb-100">
-        <h3>No items found in cart to checkout</h3>
+        <h3>{{ $t('checkout.empty') }}</h3>
         <nuxt-link class="os-btn os-btn-black mt-15" to="/shop">
-          Shop Now
+          {{ $t('checkout.shop-now') }}
         </nuxt-link>
       </div>
       <div v-if="state.cart_products.length > 0">
