@@ -15,9 +15,9 @@
               </div>
               <div class="shop__header-right d-flex align-items-center justify-content-between justify-content-sm-end">
                 <!-- sort-filtering -->
-                <sort-filtering />
+                <!-- <sort-filtering /> -->
                 <!-- sort-filtering -->
-                <ul id="pills-tab" class="nav nav-pills" role="tablist">
+                <!-- <ul id="pills-tab" class="nav nav-pills" role="tablist">
                   <li class="nav-item">
                     <a
                       id="pills-grid-tab"
@@ -40,7 +40,7 @@
                       aria-selected="false"
                     ><i class="fas fa-list-ul" /></a>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
             <div id="pills-tabContent" class="tab-content">
