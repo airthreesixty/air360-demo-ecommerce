@@ -6,14 +6,14 @@
     <div class="col-md-6">
       <div class="checkout-form-list">
         <label>{{ $t('checkout.details.first-name') }} <span class="required">*</span></label>
-        <input type="text" :placeholder="$t('checkout.details.first-name')" required>
-        <!-- <checkout-input-component id="first-name" v-model="firstName" type="text" :placeholder="$t('checkout.details.first-name')" :label="$t('checkout.details.first-name')" /> -->
+        <input type="text" :value="modelValue" :placeholder="$t('checkout.details.first-name')" required @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)">
+        <!-- <checkout-input-component id="first-name" type="text" :placeholder="$t('checkout.details.first-name')" :label="$t('checkout.details.first-name')" /> -->
       </div>
     </div>
     <div class="col-md-6">
       <div class="checkout-form-list">
         <label>{{ $t('checkout.details.last-name') }}<span class="required">*</span></label>
-        <input type="text" :placeholder="$t('checkout.details.last-name')" required>
+        <input type="text" :value="modelValue" :placeholder="$t('checkout.details.last-name')" required @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)">
       </div>
     </div>
     <div class="col-md-12">
@@ -84,26 +84,30 @@
   </div>
 </template>
 
-<script>
+<script setup lang="ts">
 import CountrySelect from './CountrySelect.vue'
 
-export default {
-  components: { CountrySelect },
-  setup () {
-    const firstName = ref('')
-    return {
-      firstName,
-    }
-  },
-  data () {
-    return {
-      createAccount: false,
-    }
-  },
-  methods: {
-    handleCreateAccount () {
-      this.createAccount = !this.createAccount
-    },
-  },
+interface Props {
+  modelValue: string | number | null;
+  // id: string;
+  // label: string;
+  // type?: 'text' | 'number';
 }
+
+defineProps<Props>()
+
+defineEmits<{(e: 'update:modelValue', value: number | string): void}>()
+// export default {
+//   components: { CountrySelect },
+//   data () {
+//     return {
+//       createAccount: false,
+//     }
+//   },
+//   methods: {
+//     handleCreateAccount () {
+//       this.createAccount = !this.createAccount
+//     },
+//   },
+// }
 </script>
