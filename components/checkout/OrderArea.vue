@@ -33,7 +33,14 @@
             <td>
               <ul>
                 <li>
-                  <input id="flat-rate" v-model="ship_cost" :value="7.00" name="ship-cost" type="radio">
+                  <input
+                    id="flat-rate"
+                    v-model="ship_cost"
+                    :value="7.00"
+                    name="ship-cost"
+                    type="radio"
+                    checked
+                  >
                   <label for="flat-rate">
                     {{ $t('checkout.details.order.flat-rate') }}: <span class="amount">$7.00</span>
                   </label>

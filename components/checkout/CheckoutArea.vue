@@ -33,10 +33,18 @@ import OrderArea from './OrderArea.vue'
 
 export default {
   components: { OrderArea, BillingDetails, DifferentAddress },
-  methods: {
-    handleFormSubmit () {
+  setup () {
+    const router = useRouter()
+    const localePath = useLocalePath()
+
+    const handleFormSubmit = () => {
       console.log('submit form')
-    },
+      router.push(localePath('/thank-you'))
+    }
+
+    return {
+      handleFormSubmit,
+    }
   },
 }
 </script>

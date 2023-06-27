@@ -126,6 +126,10 @@
         "details": {
             "title": "Product Details",
             "subtitle": "Product Details"
+        },
+        "thank-you": {
+            "title": "Thank you page",
+            "subtitle": "Thank you page"
         }
     },
     "categories": {
@@ -415,6 +419,11 @@
         "wish-list": "Wishlist",
         "checkout": "Checkout",
         "register": "Register",
-        "login": "Login"
+        "login": "Login",
+        "thank-you": "Thank you page"
+    },
+    "thank-you": {
+        "title": "Thank you for your order.",
+        "desc": "Your purchased items will be shipped as soon as possible. Please look forward to it."
     }
 }
