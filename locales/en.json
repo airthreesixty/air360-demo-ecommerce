@@ -44,7 +44,7 @@
     },
     "slider1": {
         "sm-title": "UP TO 50% OFF",
-        "title": "Life style that you need, Yo.",
+        "title": "Life style that you need",
         "desc": "Discover the lifestyle you truly need, Yo. Embrace a vibrant and authentic way of living that aligns with your passions, values, and personal well-being."
     },
     "slider2": {
@@ -194,12 +194,12 @@
             "sm_desc":  "Antique lamp is an exquisite antique piece, radiating a warm and nostalgic glow, adding a touch of vintage charm and elegance to any space."
         },
         "adrianna-papell": {
-            "title": "Adrianna Papell",
-            "sm_desc": "Adrianna Papell offers a collection of glamorous and elegant dresses, designed with exquisite details and craftsmanship, ensuring you shine on any special occasion."
+            "title": "Dress",
+            "sm_desc": "Dress offers a collection of glamorous and elegant dresses, designed with exquisite details and craftsmanship, ensuring you shine on any special occasion."
         },
         "calvin-klein-women": {
-            "title": "Calvin Klein Green Dress",
-            "sm_desc": "Calvin Klein Women fragrance embodies the essence of modern femininity, with its captivating blend of floral and woody notes, leaving a lasting impression of confidence and grace."
+            "title": "Green Dress",
+            "sm_desc": "Green Dress embodies the essence of modern femininity, with its captivating blend of floral and woody notes, leaving a lasting impression of confidence and grace."
         },
         "humidifier": {
             "title":  "Humidifier",
@@ -214,12 +214,12 @@
             "sm_desc":"Knitted hat keeps you warm and fashionable during colder seasons, with its soft and cozy knit fabric and trendy design, adding a touch of charm to your outfit."
         },
         "cool-jacket": {
-            "title": "Cool Jacket",
-            "sm_desc":  "Cool jacket combines style and functionality, featuring a sleek design, breathable materials, and innovative features, keeping you comfortable and fashionable in any weather."
+            "title": "Jacket",
+            "sm_desc":  "Jacket combines style and functionality, featuring a sleek design, breathable materials, and innovative features, keeping you comfortable and fashionable in any weather."
         },
         "sophisticated-dress": {
-            "title": "Sophisticated Dress",
-            "sm_desc": "Sophistique dress embodies elegance and sophistication, with its timeless design, impeccable tailoring, and luxurious fabrics, making it a standout choice for special occasions."
+            "title": "Robe",
+            "sm_desc": "Robe embodies elegance and sophistication, with its timeless design, impeccable tailoring, and luxurious fabrics, making it a standout choice for special occasions."
         },
         "high-heels": {
             "title": "High Heels",

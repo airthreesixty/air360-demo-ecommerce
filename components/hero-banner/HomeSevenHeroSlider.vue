@@ -13,8 +13,7 @@
               <div class="col-xl-7 col-lg-7 col-md-10">
                 <div class="slider__content slider__content-5">
                   <span :class="`${item.meta?'meta':''}`">{{ item.sm_title }}</span>
-                  <h2 v-html="item.title" />
-                  <p v-html="item.subtitle" />
+                  <h2 class="main-title" v-html="item.title" />
                   <nuxt-link :to="localePath('/shop')" class="os-btn-4 hero-slider-btn">
                     {{ $t('shop-now') }}
                   </nuxt-link>
@@ -97,3 +96,9 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped>
+.main-title {
+  padding: 20px 0;
+}
+</style>
