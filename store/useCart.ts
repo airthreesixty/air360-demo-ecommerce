@@ -55,7 +55,7 @@ export const useCartStore = defineStore('cart', {
       localStorage.setItem('cart_products', JSON.stringify(this.cart_products))
     },
     // remover_cart_products
-    _cart_products (payload: ProductType, itemName:string, message:string) {
+    remover_cart_products (payload: ProductType, itemName:string, message:string) {
       this.cart_products = this.cart_products.filter(p => p.id !== payload.id)
       useNuxtApp().$toast.error(`${itemName} ${message}`)
       localStorage.setItem('cart_products', JSON.stringify(this.cart_products))

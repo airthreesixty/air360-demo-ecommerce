@@ -41,7 +41,7 @@
       <div class="post-comments-title mb-30">
         <h3>{{ $t('reviews.your-review') }}</h3>
         <div class="post-rating">
-          <span>{{ $t('reviews.your-rating') }} :</span>
+          <span>{{ $t('reviews.your-user-rating') }} :</span>
           <ul>
             <li>
               <a href="#">
