@@ -1,9 +1,7 @@
 <template>
   <div :class="`product__modal-content ${style_2?'product__modal-content-2':''}`">
     <h4>
-      <nuxt-link :href="`/product-details/${item.id}`">
-        <span>{{ $t(`${item.title}.title`) }}</span>
-      </nuxt-link>
+      <span>{{ $t(`${item.title}.title`) }}</span>
     </h4>
     <div class="rating rating-shop mb-15">
       <ul>
@@ -26,7 +24,7 @@
     </div>
     <div class="product__modal-form">
       <form action="#">
-        <div class="product__modal-input size mb-20">
+        <div v-if="item.sizes" class="product__modal-input size mb-20">
           <label>{{ $t('details.size') }} <i class="fas fa-star-of-life" /></label>
           <select>
             <option>- {{ $t('details.please-select') }} -</option>
@@ -35,7 +33,7 @@
             </option>
           </select>
         </div>
-        <div class="product__modal-input color mb-20">
+        <div v-if="item.colors" class="product__modal-input color mb-20">
           <label>{{ $t('details.color') }} <i class="fas fa-star-of-life" /></label>
           <select>
             <option>- {{ $t('details.please-select') }} -</option>
