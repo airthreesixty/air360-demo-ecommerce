@@ -4,7 +4,7 @@
     <client-only>
       <div v-if="state.cart_products.length === 0" class="text-center pt-100 pb-100">
         <h3>{{ $t('checkout.empty') }}</h3>
-        <nuxt-link class="os-btn os-btn-black mt-15" to="/shop">
+        <nuxt-link class="os-btn os-btn-black mt-15" :to="localePath('/shop')">
           {{ $t('checkout.shop-now') }}
         </nuxt-link>
       </div>
@@ -34,10 +34,11 @@ export default defineComponent({
   setup () {
     const state = useCartStore()
     const { t } = useI18n()
+    const localePath = useLocalePath()
     useHead({
       title: t('page-title.checkout'),
     })
-    return { state }
+    return { state, localePath }
   },
 })
 </script>
