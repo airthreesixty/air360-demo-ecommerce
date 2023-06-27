@@ -144,7 +144,7 @@ export default defineComponent({
   },
   data () {
     return {
-      ship_cost: 0,
+      ship_cost: 7.0,
     }
   },
 })
