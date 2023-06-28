@@ -1,12 +1,12 @@
 <template>
   <tr>
     <td class="product-thumbnail">
-      <nuxt-link :href="`/product-details/${item.id}`">
+      <nuxt-link :to="localePath(`/product-details/${item.id}`)">
         <img :src="item.img" alt="">
       </nuxt-link>
     </td>
     <td class="product-name">
-      <nuxt-link :href="`/product-details/${item.id}`">
+      <nuxt-link :to="localePath(`/product-details/${item.id}`)">
         <!-- <span v-html="item.title" /> -->
         <span>{{ $t(`${item.title}.title`) }}</span>
       </nuxt-link>
@@ -55,7 +55,8 @@ export default defineComponent({
   setup () {
     const state = useCartStore()
     const { locale } = useI18n()
-    return { state, locale }
+    const localePath = useLocalePath()
+    return { state, locale, localePath }
   },
 })
 </script>
