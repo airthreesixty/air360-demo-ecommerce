@@ -67,6 +67,10 @@ export const useCartStore = defineStore('cart', {
       }
       localStorage.setItem('cart_products', JSON.stringify(this.cart_products))
     },
+    clear_cart_checkout () {
+      this.cart_products = []
+      localStorage.setItem('cart_products', JSON.stringify(this.cart_products))
+    },
     initialOrderQuantity () {
       this.orderQuantity = 1
     },

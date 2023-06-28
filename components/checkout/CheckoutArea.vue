@@ -13,15 +13,15 @@
                 </div> -->
                 <div class="col-md-6">
                   <div class="checkout-form-list">
-                    <label>{{ $t('checkout.details.first-name') }} <span class="required">*</span></label>
-                    <input id="firstName" v-model="info.firstName" type="text" :placeholder="$t('checkout.details.first-name')" required>
-                    <!-- <checkout-input-component id="first-name" type="text" :placeholder="$t('checkout.details.first-name')" :label="$t('checkout.details.first-name')" /> -->
+                    <label>{{ $t('checkout.details.last-name') }}<span class="required">*</span></label>
+                    <input id="lastName" v-model="info.lastName" type="text" :placeholder="$t('checkout.details.last-name')" required>
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="checkout-form-list">
-                    <label>{{ $t('checkout.details.last-name') }}<span class="required">*</span></label>
-                    <input id="lastName" v-model="info.lastName" type="text" :placeholder="$t('checkout.details.last-name')" required>
+                    <label>{{ $t('checkout.details.first-name') }} <span class="required">*</span></label>
+                    <input id="firstName" v-model="info.firstName" type="text" :placeholder="$t('checkout.details.first-name')" required>
+                    <!-- <checkout-input-component id="first-name" type="text" :placeholder="$t('checkout.details.first-name')" :label="$t('checkout.details.first-name')" /> -->
                   </div>
                 </div>
                 <!-- <div class="col-md-12">
@@ -263,6 +263,7 @@ const info = reactive({
 const handleFormSubmit = () => {
   console.log('submit form')
   console.log(info)
+  state.clear_cart_checkout()
   router.push(localePath('/thank-you'))
 }
 </script>
