@@ -24,12 +24,12 @@
                     <input id="lastName" v-model="info.lastName" type="text" :placeholder="$t('checkout.details.last-name')" required>
                   </div>
                 </div>
-                <div class="col-md-12">
+                <!-- <div class="col-md-12">
                   <div class="checkout-form-list">
                     <label>{{ $t('checkout.details.company-name') }}</label>
                     <input id="companyName" v-model="info.companyName" type="text" :placeholder="$t('checkout.details.company-name')">
                   </div>
-                </div>
+                </div> -->
                 <div class="col-md-12">
                   <div class="checkout-form-list">
                     <label>{{ $t('checkout.details.address') }} <span class="required">*</span></label>
@@ -46,18 +46,18 @@
                     >
                   </div>
                 </div>
-                <div class="col-md-12">
+                <!-- <div class="col-md-12">
                   <div class="checkout-form-list">
                     <label>{{ $t('checkout.details.town') }} <span class="required">*</span></label>
                     <input id="town" v-model="info.town" type="text" placeholder="Town / City" required>
                   </div>
-                </div>
-                <div class="col-md-6">
+                </div> -->
+                <!-- <div class="col-md-6">
                   <div class="checkout-form-list">
                     <label>{{ $t('checkout.details.state') }} <span class="required">*</span></label>
                     <input id="state" v-model="info.state" type="text" :placeholder="$t('checkout.details.state')" required>
                   </div>
-                </div>
+                </div> -->
                 <div class="col-md-6">
                   <div class="checkout-form-list">
                     <label>{{ $t('checkout.details.zip') }} <span class="required">*</span></label>
@@ -70,12 +70,12 @@
                     <input id="email" v-model="info.email" type="email" :placeholder="$t('checkout.details.email')" required>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                   <div class="checkout-form-list">
                     <label>{{ $t('checkout.details.phone') }}<span class="required">*</span></label>
                     <input id="phone" v-model="info.phone" type="text" :placeholder="$t('checkout.details.phone')" required>
                   </div>
-                </div>
+                </div> -->
               </div>
 
               <!-- billing details end -->
