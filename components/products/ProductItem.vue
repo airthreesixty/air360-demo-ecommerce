@@ -28,8 +28,8 @@
           <span>{{ $t(`${item.title}.title`) }}</span>
         </nuxt-link>
         <div class="product__price transition-3">
-          <span>${{ typeof item.price === 'number' ? item.price.toFixed(2) : item.price }}</span>
-          <span v-if="item.old_price" class="old-price">${{ item.old_price }}</span>
+          <span>{{ $t('currency-mark') }}{{ locale === 'ja' ? (item.price * 100).toLocaleString() : item.price }}</span>
+          <span v-if="item.old_price" class="old-price">{{ $t('currency-mark') }}{{ locale === 'ja' ? (item.old_price * 100).toLocaleString() : item.old_price }}</span>
         </div>
       </div>
       <div class="add-cart p-absolute transition-3">
@@ -62,10 +62,11 @@ export default defineComponent({
   },
   setup () {
     const store = useCartStore()
+    const { locale } = useI18n()
     const wishlistState = useWishlistStore()
     const compareState = useCompareStore()
     const localePath = useLocalePath()
-    return { store, wishlistState, compareState, localePath }
+    return { store, wishlistState, compareState, localePath, locale }
   },
 })
 </script>

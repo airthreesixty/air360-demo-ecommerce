@@ -425,5 +425,6 @@
     "thank-you": {
         "title": "Thank you for your order.",
         "desc": "Your purchased items will be shipped as soon as possible. Please look forward to it."
-    }
+    },
+    "currency-mark": "$"
 }

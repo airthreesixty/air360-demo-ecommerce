@@ -19,14 +19,14 @@
               {{ $t(`${item.title}.title`) }} <strong class="product-quantity"> × {{ item.orderQuantity }}</strong>
             </td>
             <td class="product-total">
-              <span class="amount">${{ item.price }}</span>
+              <span class="amount">{{ $t('currency-mark') }}{{ item.price }}</span>
             </td>
           </tr>
         </tbody>
         <tfoot>
           <tr class="cart-subtotal">
             <th>{{ $t('checkout.details.order.subtotal') }}</th>
-            <td><span class="amount">${{ state.totalPriceQuantity.total.toFixed(2) }}</span></td>
+            <td><span class="amount">{{ $t('currency-mark') }}{{ state.totalPriceQuantity.total }}</span></td>
           </tr>
           <tr class="shipping">
             <th>{{ $t('checkout.details.order.shipping') }}</th>
@@ -36,13 +36,13 @@
                   <input
                     id="flat-rate"
                     v-model="ship_cost"
-                    :value="7.00"
+                    :value="7"
                     name="ship-cost"
                     type="radio"
                     checked
                   >
                   <label for="flat-rate">
-                    {{ $t('checkout.details.order.flat-rate') }}: <span class="amount">$7.00</span>
+                    {{ $t('checkout.details.order.flat-rate') }}: <span class="amount">{{ $t('currency-mark') }}7</span>
                   </label>
                 </li>
                 <li>
@@ -57,9 +57,9 @@
             <td>
               <strong>
                 <span class="amount">
-                  ${{ typeof ship_cost === 'number' && ship_cost > 0 ?
-                    (state.totalPriceQuantity.total + ship_cost).toFixed(2)
-                    : state.totalPriceQuantity.total.toFixed(2) }}
+                  {{ $t('currency-mark') }}{{ typeof ship_cost === 'number' && ship_cost > 0 ?
+                    (state.totalPriceQuantity.total + ship_cost)
+                    : state.totalPriceQuantity.total }}
                 </span>
               </strong>
             </td>

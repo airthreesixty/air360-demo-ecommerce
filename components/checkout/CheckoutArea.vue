@@ -106,14 +106,14 @@
                         {{ $t(`${item.title}.title`) }} <strong class="product-quantity"> × {{ item.orderQuantity }}</strong>
                       </td>
                       <td class="product-total">
-                        <span class="amount">${{ item.price }}</span>
+                        <span class="amount">{{ $t('currency-mark') }}{{ locale==='ja' ? (item.price * 100).toLocaleString(): item.price }}</span>
                       </td>
                     </tr>
                   </tbody>
                   <tfoot>
                     <tr class="cart-subtotal">
                       <th>{{ $t('checkout.details.order.subtotal') }}</th>
-                      <td><span class="amount">${{ state.totalPriceQuantity.total.toFixed(2) }}</span></td>
+                      <td><span class="amount">{{ $t('currency-mark') }}{{ locale === 'ja' ? (state.totalPriceQuantity.total * 100).toLocaleString() : state.totalPriceQuantity.total }}</span></td>
                     </tr>
                     <tr class="shipping">
                       <th>{{ $t('checkout.details.order.shipping') }}</th>
@@ -123,13 +123,13 @@
                             <input
                               id="flat-rate"
                               v-model="ship_cost"
-                              :value="7.00"
+                              :value="locale === 'ja' ? 700 : 7"
                               name="ship-cost"
                               type="radio"
                               checked
                             >
                             <label for="flat-rate">
-                              {{ $t('checkout.details.order.flat-rate') }}: <span class="amount">$7.00</span>
+                              {{ $t('checkout.details.order.flat-rate') }}: <span class="amount">{{ $t('currency-mark') }}{{ locale === 'ja'? 700: 7 }}</span>
                             </label>
                           </li>
                           <li>
@@ -144,9 +144,9 @@
                       <td>
                         <strong>
                           <span class="amount">
-                            ${{ typeof ship_cost === 'number' && ship_cost > 0 ?
-                              (state.totalPriceQuantity.total + ship_cost).toFixed(2)
-                              : state.totalPriceQuantity.total.toFixed(2) }}
+                            {{ $t('currency-mark') }}{{ typeof ship_cost === 'number' && ship_cost > 0 ?
+                              locale === 'ja' ? ((state.totalPriceQuantity.total) * 100 + ship_cost).toLocaleString() :(state.totalPriceQuantity.total + ship_cost).toLocaleString()
+                              : locale === 'ja' ? (state.totalPriceQuantity.total * 100).toLocaleString() : state.totalPriceQuantity.total.toLocaleString() }}
                           </span>
                         </strong>
                       </td>
@@ -237,7 +237,14 @@ import { useCartStore } from '~/store/useCart'
 const router = useRouter()
 const localePath = useLocalePath()
 const state = useCartStore()
-const ship_cost = ref(7.0)
+const { locale } = useI18n()
+
+let ship_cost
+if (locale.value === 'ja') {
+  ship_cost = ref(700)
+} else {
+  ship_cost = ref(7)
+}
 
 const info = reactive({
   firstName: '',

@@ -12,7 +12,7 @@
       </nuxt-link>
     </td>
     <td class="product-price">
-      <span class="amount">${{ item.price }}</span>
+      <span class="amount">{{ $t('currency-mark') }}{{ locale === 'ja' ? (item.price * 100).toLocaleString() : item.price }}</span>
     </td>
     <td class="product-quantity">
       <div class="cart-plus-minus">
@@ -26,9 +26,9 @@
       </div>
     </td>
     <td class="product-subtotal">
-      <span class="amount">${{
-        typeof item.orderQuantity !== "undefined" &&
-          item.price * item.orderQuantity
+      <span class="amount">{{ $t('currency-mark') }}{{
+        typeof item.orderQuantity !== "undefined" && locale === 'ja' ?
+          (item.price * 100 * item.orderQuantity).toLocaleString() : item.price * item.orderQuantity
       }}</span>
     </td>
     <td class="product-remove" @click.prevent="state.remover_cart_products(item, $t(`${item.title}.title`), $t('remove-from-cart'))">
@@ -54,7 +54,8 @@ export default defineComponent({
   },
   setup () {
     const state = useCartStore()
-    return { state }
+    const { locale } = useI18n()
+    return { state, locale }
   },
 })
 </script>

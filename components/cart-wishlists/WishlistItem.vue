@@ -11,7 +11,7 @@
       </nuxt-link>
     </td>
     <td class="product-price">
-      <span class="amount">${{ item.price }}</span>
+      <span class="amount">{{ $t('currency-mark') }}{{ locale === 'ja' ? (item.price * 100).toLocaleString(): item.price }}</span>
     </td>
     <td class="product-quantity" @click.prevent="cartState.add_cart_product(item, $t(`${item.title}.title`), $t('added-to-cart'))">
       <button class="os-btn os-btn-black" type="submit">
@@ -19,7 +19,7 @@
       </button>
     </td>
     <td class="product-subtotal">
-      <span class="amount">${{ item.price }}</span>
+      <span class="amount">{{ $t('currency-mark') }}{{ locale === 'ja' ? (item.price * 100).toLocaleString() : item.price }}</span>
     </td>
     <td class="product-remove" @click.prevent="wishlistState.removeWishlist(item)">
       <a href="#">
@@ -46,7 +46,8 @@ export default defineComponent({
   setup () {
     const cartState = useCartStore()
     const wishlistState = useWishlistStore()
-    return { cartState, wishlistState }
+    const { locale } = useI18n()
+    return { cartState, wishlistState, locale }
   },
 })
 </script>

@@ -34,8 +34,8 @@
           </nuxt-link>
         </h4>
         <div class="product__price-3">
-          <span>${{ item.price.toFixed(2) }}</span>
-          <span v-if="item.old_price" class="old-price"><del>${{ item.old_price }}</del></span>
+          <span>{{ $t('currency-mark') }}{{ locale==='ja' ? (item.price * 100).toLocaleString() : item.price }}</span>
+          <span v-if="item.old_price" class="old-price"><del>${{ locale==='ja' ? (item.old_price * 100).toLocaleString() : item.old_price }}</del></span>
         </div>
       </div>
     </div>
@@ -64,7 +64,8 @@ export default defineComponent({
   setup () {
     const store = useCartStore()
     const localePath = useLocalePath()
-    return { store, localePath }
+    const { locale } = useI18n()
+    return { store, localePath, locale }
   },
 })
 </script>

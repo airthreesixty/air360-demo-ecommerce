@@ -27,9 +27,9 @@
         </ul>
       </div>
       <div class="price">
-        <span>${{ prd.price.toFixed(2) }}</span>
+        <span>{{ $t('currency-mark') }}{{ prd.price }}</span>
         <span v-if="prd.sale_of_per" class="price-old">
-          ${{ (prd.price - prd.price * prd.sale_of_per / 100).toFixed(2) }}
+          {{ $t('currency-mark') }}{{ (prd.price - prd.price * prd.sale_of_per / 100) }}
         </span>
         <div class="add-cart p-absolute transition-3">
           <a href="#" @click.prevent="state.add_cart_product(prd, _, $t('added-to-cart'))">+ Add to Cart</a>

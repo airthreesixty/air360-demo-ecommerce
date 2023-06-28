@@ -16,8 +16,8 @@
       </span>
     </div>
     <div class="product__price-2 mb-25">
-      <span>${{ item.price.toFixed(2) }}</span>
-      <span v-if="item.old_price" class="old-price">${{ item.old_price }}</span>
+      <span>{{ $t('currency-mark') }}{{ locale === 'ja' ? (item.price * 100).toLocaleString() : item.price }}</span>
+      <span v-if="item.old_price" class="old-price">{{ $t('currency-mark') }}{{ locale === 'ja' ? (item.old_price * 100).toLocaleString() : item.old_price }}</span>
     </div>
     <div class="product__modal-des mb-30">
       <p>{{ $t(`${item.sm_desc}`) }}</p>
@@ -93,7 +93,8 @@ export default defineComponent({
 
   setup () {
     const state = useCartStore()
-    return { state }
+    const { locale } = useI18n()
+    return { state, locale }
   },
 })
 </script>

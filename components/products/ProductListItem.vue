@@ -22,8 +22,8 @@
               </nuxt-link>
             </h4>
             <div class="product__price-2 mb-10">
-              <span>${{ typeof item.price === 'number' ? item.price.toFixed(2) : item.price }}</span>
-              <span v-if="item.old_price" class="old-price">${{ item.old_price }}</span>
+              <span>{{ $t('currency-mark') }}{{ typeof item.price === 'number' ? item.price : item.price }}</span>
+              <span v-if="item.old_price" class="old-price">{{ $t('currency-mark') }}{{ item.old_price }}</span>
             </div>
             <p>{{ item.sm_desc }}</p>
             <div class="product__list mb-30">

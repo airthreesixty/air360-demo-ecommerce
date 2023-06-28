@@ -18,7 +18,7 @@
               <button type="submit">
                 {{ $t('sidebar-products.filter') }}
               </button>
-              <label for="amount">{{ $t('sidebar-products.price') }} : ${{ state.priceRange[0] }} - ${{ state.priceRange[1] }}</label>
+              <label for="amount">{{ $t('sidebar-products.price') }} : {{ $t('currency-mark') }}{{ state.priceRange[0] }} - {{ $t('currency-mark') }}{{ locale === 'ja' ? (state.priceRange[1] * 100).toLocaleString() : state.priceRange[1] }}</label>
             </form>
           </div>
         </div>
@@ -37,7 +37,8 @@ export default defineComponent({
   components: { Slider },
   setup () {
     const state = useProductsStore()
-    return { state }
+    const { locale } = useI18n()
+    return { state, locale }
   },
 })
 </script>

@@ -70,8 +70,8 @@
                   <div class="cart-page-total">
                     <h2>{{ $t('cart.total') }}</h2>
                     <ul class="mb-20">
-                      <li>{{ $t('cart.subtotal') }}<span>${{ state.totalPriceQuantity.total }}</span></li>
-                      <li>{{ $t('cart.total') }} <span>${{ state.totalPriceQuantity.total }}</span></li>
+                      <li>{{ $t('cart.subtotal') }}<span>{{ $t('currency-mark') }}{{ locale === 'ja' ? (state.totalPriceQuantity.total * 100).toLocaleString() : state.totalPriceQuantity.total }}</span></li>
+                      <li>{{ $t('cart.total') }} <span>{{ $t('currency-mark') }}{{ locale === 'ja' ? (state.totalPriceQuantity.total * 100).toLocaleString() : state.totalPriceQuantity.total }}</span></li>
                     </ul>
                     <nuxt-link class="os-btn" :to="localePath('/checkout')">
                       {{ $t('cart.checkout') }}
@@ -97,7 +97,8 @@ export default defineComponent({
   setup () {
     const state = useCartStore()
     const localePath = useLocalePath()
-    return { state, localePath }
+    const { locale } = useI18n()
+    return { state, localePath, locale }
   },
 })
 </script>

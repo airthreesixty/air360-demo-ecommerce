@@ -21,9 +21,9 @@
                   </nuxt-link>
                 </h5>
                 <div class="price">
-                  <span>${{ item.price }}</span>
+                  <span>{{ $t('currency-mark') }}{{ locale === 'ja' ? (item.price * 100).toLocaleString() : item.price }}</span>
                   <span v-if="item.old_price" class="old-price">
-                    <del>${{ item.old_price }}</del>
+                    <del>{{ $t('currency-mark') }}{{ locale === 'ja' ? (item.old_price * 100).toLocaleString() : item.old_price }}</del>
                   </span>
                 </div>
               </div>
@@ -44,7 +44,8 @@ export default defineComponent({
     const store = useProductsStore()
     const featured_prd = store.products.filter(p => p.trending).slice(0, 2)
     const localePath = useLocalePath()
-    return { featured_prd, localePath }
+    const { locale } = useI18n()
+    return { featured_prd, localePath, locale }
   },
 })
 </script>

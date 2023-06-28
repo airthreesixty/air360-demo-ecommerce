@@ -36,7 +36,7 @@
                     <th>Price</th>
                     <td v-for="(item,i) in state.compare" :key="i">
                       <div class="tp-compare-price">
-                        <span>${{ item.price.toFixed(2) }}</span>
+                        <span>{{ item.price }}</span>
                         <span v-if="item.old_price" class="old-price">${{ item.old_price }}</span>
                       </div>
                     </td>

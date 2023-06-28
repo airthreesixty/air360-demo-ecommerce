@@ -22,8 +22,8 @@
               </nuxt-link>
             </h5>
             <div class="cart-price">
-              <span class="ammount">{{ item.orderQuantity }}<i class="fal fa-times" /></span>
-              <span class="price">$ {{ item.price }}</span>
+              <span class="amount">{{ item.orderQuantity }}<i class="fal fa-times" /></span>
+              <span class="price">{{ $t('currency-mark') }} {{ locale === 'ja' ? (item.price * 100).toLocaleString() : item.price }}</span>
             </div>
           </div>
           <div class="del-icon f-right mt-30" @click="store.remover_cart_products(item, $t(`${item.title}.title`), $t('remove-from-cart'))">
@@ -35,7 +35,7 @@
       </ul>
       <div class="total-price d-flex justify-content-between mb-30">
         <span>{{ $t('cart-mini.subtotal') }}:</span>
-        <span>${{ store.totalPriceQuantity.total.toFixed(2) }}</span>
+        <span>{{ $t('currency-mark') }}{{ locale === 'ja' ? (store.totalPriceQuantity.total * 100).toLocaleString() : store.totalPriceQuantity.total }}</span>
       </div>
       <div class="checkout-link">
         <nuxt-link :to="localePath('/cart')" class="os-btn">
@@ -57,7 +57,8 @@ export default defineComponent({
   setup () {
     const store = useCartStore()
     const localePath = useLocalePath()
-    return { store, localePath }
+    const { locale } = useI18n()
+    return { store, localePath, locale }
   },
 })
 </script>
