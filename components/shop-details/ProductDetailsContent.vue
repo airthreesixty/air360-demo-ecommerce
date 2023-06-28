@@ -24,7 +24,7 @@
     </div>
     <div class="product__modal-form">
       <form action="#">
-        <div v-if="item.sizes" class="product__modal-input size mb-20">
+        <div v-if="item.sizes" id="product-size" class="product__modal-input size mb-20">
           <label>{{ $t('details.size') }} <i class="fas fa-star-of-life" /></label>
           <select>
             <option>- {{ $t('details.please-select') }} -</option>
@@ -33,7 +33,7 @@
             </option>
           </select>
         </div>
-        <div v-if="item.colors" class="product__modal-input color mb-20">
+        <div v-if="item.colors" id="product-color" class="product__modal-input color mb-20">
           <label>{{ $t('details.color') }} <i class="fas fa-star-of-life" /></label>
           <select>
             <option>- {{ $t('details.please-select') }} -</option>
