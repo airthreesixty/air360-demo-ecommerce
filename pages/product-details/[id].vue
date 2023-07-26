@@ -1,13 +1,14 @@
 <template>
-  <layout :transparent="true">
+  <layout-seven :transparent="true">
     <breadcrumb-area :title="$t('bread-crumb.details.title')" :subtitle="$t('bread-crumb.details.subtitle')" />
     <shop-details-area :item="item" />
-  </layout>
+  </layout-seven>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Layout from '~~/layout/Layout.vue'
+import LayoutSeven from '~/layout/LayoutSeven.vue'
 import BreadcrumbArea from '~~/components/common/breadcrumb/BreadcrumbArea.vue'
 import { useProductsStore } from '~~/store/useProducts'
 import ShopDetailsArea from '~~/components/shop-details/ShopDetailsArea.vue'
@@ -17,6 +18,7 @@ export default defineComponent({
     Layout,
     BreadcrumbArea,
     ShopDetailsArea,
+    LayoutSeven
   },
   setup () {
     const state = useProductsStore()

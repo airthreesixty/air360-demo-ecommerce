@@ -9,7 +9,7 @@
           <li v-for="(item,i) in featured_prd" :key="i" class="mb-20">
             <div class="featires__product-wrapper d-flex">
               <div class="features__product-thumb mr-15">
-                <nuxt-link :to="localePath(`/product-details/${item.id}`)">
+                <nuxt-link :to="localePath(`/product-details/${item.id}`)" style="display: inline-block">
                   <img :src="item.img" alt="pro-sm-1" style="width: 86px;height: 110px;">
                 </nuxt-link>
               </div>

@@ -7,6 +7,7 @@
 <script lang="ts">
 import { defineComponent  } from "vue";
 import Layout from "~~/layout/Layout.vue";
+import LayoutSeven from "~/layout/LayoutSeven.vue";
 import blogData from "~~/mixins/blogData";
 import BlogDetailsArea from "~~/components/blog-details/BlogDetailsArea.vue";
 
@@ -16,6 +17,7 @@ export default defineComponent({
   components: {
     Layout,
     BlogDetailsArea,
+    LayoutSeven
   },
   setup() {
 

@@ -118,7 +118,7 @@
                     </tr>
                     <tr class="shipping">
                       <th>{{ $t('checkout.details.order.shipping') }}</th>
-                      <td>
+                      <td class="test">
                         <ul>
                           <li>
                             <input
@@ -161,7 +161,9 @@
                   <div class="card">
                     <div id="headingOne" class="card-header">
                       <h5 class="mb-0">
-                        <button
+                        <input type="radio" name="radio" id="direct" value="direct">
+                        <label for="direct" class="btn-link">{{ $t('checkout.details.order.direct') }}</label>
+                        <!-- <button
                           class="btn-link"
                           type="button"
                           data-bs-toggle="collapse"
@@ -170,11 +172,11 @@
                           aria-controls="collapseOne"
                         >
                           {{ $t('checkout.details.order.direct') }}
-                        </button>
+                        </button> -->
                       </h5>
                     </div>
 
-                    <div
+                    <!-- <div
                       id="collapseOne"
                       class="collapse show"
                       aria-labelledby="headingOne"
@@ -183,12 +185,14 @@
                       <div class="card-body">
                         {{ $t('checkout.details.order.description') }}
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                   <div class="card">
                     <div id="headingTwo" class="card-header">
                       <h5 class="mb-0">
-                        <button
+                        <input type="radio" name="radio" id="credit" value="credit" checked>
+                        <label for="credit" class="btn-link">{{ $t('checkout.details.order.credit-card') }}</label>
+                        <!-- <button
                           class="btn-link collapsed"
                           type="button"
                           data-bs-toggle="collapse"
@@ -197,10 +201,10 @@
                           aria-controls="collapseTwo"
                         >
                           {{ $t('checkout.details.order.cheque-payment') }}
-                        </button>
+                        </button> -->
                       </h5>
                     </div>
-                    <div
+                    <!-- <div
                       id="collapseTwo"
                       class="collapse"
                       aria-labelledby="headingTwo"
@@ -209,7 +213,7 @@
                       <div class="card-body">
                         {{ $t('checkout.details.order.description2') }}
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
                 <div class="order-button-payment mt-20">

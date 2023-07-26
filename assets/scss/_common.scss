@@ -22,34 +22,44 @@
 		width: 100%;
 	}
 }
+
+a.w-img {
+	display: inline-block;
+}
+
 .m-img{
 	& img{
 		max-width: 100%;
 	}
 }
 
-a,
-.btn,
-button,
-span,
-p,
-i,
-input,
-select,
-textarea,
-li,
-img,
-*::after,
-*::before,
-.transition-3,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+// a,
+// .btn,
+// button,
+// span,
+// p,
+// i,
+// input,
+// select,
+// textarea,
+// li,
+// img,
+// *::after,
+// *::before,
+// .transition-3,
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+// 	@include transition(.3s);
+// }
+
+.transition-3 {
 	@include transition(.3s);
 }
+
 a:focus,
 .button:focus {
 	text-decoration: none;

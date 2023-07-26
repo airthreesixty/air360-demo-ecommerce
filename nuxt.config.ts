@@ -35,6 +35,7 @@ export default defineNuxtConfig({
     //   alwaysRedirect: true,
     // },
     baseUrl: process.env.BASE_URL,
+    trailingSlash: true,
   },
   app: {
     head: {

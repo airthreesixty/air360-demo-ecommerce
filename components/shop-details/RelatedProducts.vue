@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-      <div id="parent-related-products" class="row">
+      <div class="row">
         <div
           v-for="(prdItem, i) in state.getRelatedProducts(item.category,item.id)"
           :key="i"

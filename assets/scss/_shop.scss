@@ -1329,8 +1329,13 @@
   .cart-page-total li:last-child {
     border-bottom: 0;
   }
+  
   td.product-thumbnail img {
       width: 125px;
+  }
+
+    td.product-thumbnail a {
+    display: inline-block;
   }
 
 

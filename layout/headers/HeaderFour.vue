@@ -26,12 +26,12 @@
                 <div class="header__action">
                   <ul>
                     <li>
-                      <a href="#" class="search-toggle" @click.prevent="handleOpenSearchBar">
+                      <a href="#" class="search-toggle" @click.prevent="onClick">
                         <i class="fas fa-search" />
                       </a>
                     </li>
                     <li>
-                      <a href="#"><i class="fas fa-user" />
+                      <a href="#" class="test"><i class="fas fa-user" />
                       </a>
                       <!-- extra info start -->
                       <extra-info />
@@ -115,6 +115,9 @@ export default defineComponent({
       const offCanvas = this.$refs.offcanvas as OffCanvasComponentRef
       offCanvas.OpenOffcanvas()
     },
+    onClick() {
+      console.log("Clicked")
+    }
   },
 })
 </script>
