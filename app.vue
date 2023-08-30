@@ -1,5 +1,11 @@
 <template>
-  <NuxtPage></NuxtPage>
+  <NuxtLayout>
+  <NuxtPage />
+  <NoScript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X2LRBTX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</NoScript>
+</NuxtLayout>
 </template>
 
 <script lang="ts">
