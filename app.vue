@@ -2,7 +2,7 @@
   <NuxtLayout>
   <NuxtPage />
   <NoScript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P2HFWP3"
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGSBJV6B"
 height="0" width="0" style="display:none;visibility:hidden"></iframe>
 </NoScript>
 </NuxtLayout>
